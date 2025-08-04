@@ -1,0 +1,22 @@
+/* Right Section */
+.right-section {
+    width: 50%;
+    height: 100vh;
+    background-color: #2BAFC7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.right-image {
+    max-width: 80%;
+    height: auto;
+}
+
+/* Responsive: Hide on smaller screens */
+@media (max-width: 768px) {
+    .right-section {
+        display: none;
+    }
+}

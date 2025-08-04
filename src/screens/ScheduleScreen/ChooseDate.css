@@ -1,0 +1,121 @@
+.calendar-container {
+    width: 515px;
+    height: 564px;
+    border-radius: 19.02px;
+    background: #ebf7fd;
+    padding: 14px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.calendar-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: #000;
+}
+
+/* Booking range container */
+.booking-range {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 12px;
+    height: 56px;
+    width: 415px;
+    margin: auto;
+    margin-bottom: 24px;
+    padding: 0 20px;
+    font-size: 12.24px;
+    font-weight: 400;
+    line-height: 16.31px;
+    color: #2bafc7;
+}
+
+.booking-range>div {
+    text-align: center;
+}
+
+/* Divider between from/to */
+.divider-calender {
+    width: 1px;
+    height: 70%;
+    background-color: #726b6b;
+    margin: 0 12px;
+    align-self: center;
+}
+
+.rdrDateDisplayItemActive {
+    border: 1px solid var(--skyblue-color);
+    border-radius: 12px;
+}
+
+.rdrDateDisplayItem {
+    margin-top: 24px;
+    border-radius: 9px;
+    background-color: rgb(241, 250, 253);
+}
+
+/* Main calendar box */
+.main-calander {
+    width: 415px;
+    height: 317px;
+    margin: auto;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Calendar wrapper scaling */
+.custom-calendar {
+    transform: scale(0.98);
+    transform-origin: top center;
+}
+
+/* Header: month and year */
+.custom-calendar .rdrMonthAndYearWrapper {
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+/* Weekday labels */
+.custom-calendar .rdrWeekDays {
+    font-size: 12px;
+    padding: 0 10px;
+}
+
+
+.custom-calendar .rdrDay {
+    width: 32px;
+    height: 32px;
+}
+
+.rdrDateDisplayWrapper {
+    background-color: var(--secondary-color);
+}
+
+/* Prev/Next buttons */
+.custom-calendar .rdrMonthAndYearWrapper button {
+    font-size: 14px;
+    padding: 6px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Arrow icons */
+.custom-calendar .rdrNextPrevButton svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Continue button */
+.calander-btn {
+    margin-top: 34px;
+    width: 79%;
+    cursor: pointer;
+}

@@ -1,0 +1,16 @@
+/* =======================================
+   Social Button Group
+======================================= */
+.buttonGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+/* Responsive: Center-align on small screens */
+@media (max-width: 800px) {
+  .buttonGroup {
+    align-items: center;
+  }
+}

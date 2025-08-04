@@ -1,0 +1,106 @@
+.avatar-profile {
+    width: 155px;
+    height: auto;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.avator-image {
+    width: 58px;
+    height: 58px;
+    margin-bottom: 6px;
+}
+
+.avatar-name {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--skyblue-color);
+    margin: 3px 0 1px;
+}
+
+.avatar-subtitle {
+    font-size: 11.5px;
+    color: var(--gray-medium);
+    margin: 0 0 4px;
+}
+
+.avatar-review {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.star-icon {
+    width: 11.5px;
+    height: 11.5px;
+    color: var(--yellow);
+}
+
+.review-text {
+    font-size: 11.5px;
+    color: var(--gray-dark);
+}
+
+@media screen and (max-width: 768px) {
+    .avatar-profile {
+        width: 130px;
+        padding: 10px;
+    }
+
+    .avatar-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .avatar-name {
+        font-size: 13px;
+    }
+
+    .avatar-subtitle {
+        font-size: 11px;
+    }
+
+    .review-text {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .avatar-profile {
+        width: 140px;
+        align-items: center;
+        padding: 5px;
+        height: 160px;
+    }
+
+    .avatar-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .avatar-name {
+        font-size: 14px;
+        margin-top: 25px;
+    }
+
+    .avatar-subtitle {
+        font-size: 12px;
+    }
+
+    .review-text {
+        font-size: 12px;
+    }
+
+    .star-icon {
+        width: 11px;
+        height: 11px;
+    }
+}

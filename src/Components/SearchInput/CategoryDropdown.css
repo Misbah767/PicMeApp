@@ -1,0 +1,28 @@
+/* CategoryDropdown.css */
+
+.photographer-popup {
+    position: absolute;
+    top: 40px;
+    /* Adjust depending on icon size */
+    right: 0;
+    /* Align exactly under the Control Panel icon */
+    width: 220px;
+    background: var(--secondary-color);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    padding: 10px;
+}
+
+.popup-option {
+    padding: 8px 12px;
+    font-size: 14px;
+    color: var(--gray-medium);
+    cursor: pointer;
+}
+
+.popup-option:hover {
+    background-color: var(--skyblue-color);
+    border-radius: 6px;
+    color: var(--secondary-color);
+}

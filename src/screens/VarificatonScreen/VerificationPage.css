@@ -1,0 +1,73 @@
+/* src/screens/VarificatonScreen/VerificationPage.css */
+.verification-page {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.left-screen {
+  width: 50%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.logo-wrapper {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  z-index: 100;
+}
+
+@media (max-width: 992px) {
+  .verification-page {
+    flex-direction: row;
+    height: auto;
+  }
+
+  .logo-wrapper {
+    position: static;
+    margin: 1rem auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .right-section {
+    display: none;
+  }
+
+  .left-screen {
+    padding-left: 2rem;
+    margin-top: 9rem;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
+}
+
+@media (max-width: 400px) {
+  .right-section {
+    display: none;
+  }
+
+  .left-screen {
+    padding-left: 2rem;
+    margin-top: 7rem;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
+}
+
+@media (max-width: 330px) {
+
+  .left-screen {
+
+    margin-top: 3rem;
+  }
+}

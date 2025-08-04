@@ -1,0 +1,41 @@
+.button {
+    width: 100%;
+    padding: 11px 20px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 2px solid #2BAFC7;
+    /* default border */
+    cursor: pointer;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-sizing: border-box;
+}
+
+.filled {
+    background-color: #2BAFC7;
+    color: #ffffff;
+    border: 2px solid transparent;
+    /* << fix */
+}
+
+.filled:hover {
+    background-color: #2fa2b7;
+}
+
+.outline {
+    background-color: transparent;
+    color: #2BAFC7;
+    border: 2px solid #2BAFC7;
+}
+
+.outline:hover {
+    opacity: 0.8;
+}
+
+.leftIcon {
+    display: inline-flex;
+    align-items: center;
+}

@@ -1,0 +1,41 @@
+/* =======================================
+   Neumorphism Style - Social Login Button
+======================================= */
+.socialBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    padding: 14px 20px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    color: #555;
+    font-weight: 500;
+    margin-bottom: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.3px;
+
+    /* Neumorphism Effect */
+    box-shadow:
+        6px 6px 16px rgba(0, 0, 0, 0.05),
+        -6px -6px 16px rgba(255, 255, 255, 0.8);
+}
+
+
+/* Pressed/Active effect */
+/* .socialBtn:active {
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1),
+        inset -2px -2px 5px rgba(255, 255, 255, 0.7);
+} */
+
+/* Icon inside the button */
+.socialBtn .icon {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

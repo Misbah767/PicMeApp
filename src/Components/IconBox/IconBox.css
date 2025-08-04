@@ -1,0 +1,33 @@
+.icon-box {
+    width: 56px;
+    height: 51px;
+    border-radius: 12px;
+    opacity: 1;
+    transform: rotate(0deg);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/*  Responsive styles for mobile screens */
+@media (max-width: 480px) {
+    .icon-box {
+        width: 50px;
+        height: 45px;
+        margin-left: 0px;
+        border-radius: 10px;
+    }
+
+    /* Optional: reduce icon size inside the box */
+    .icon-box svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .icon-box img {
+        width: 16px;
+        height: 16px;
+    }
+}

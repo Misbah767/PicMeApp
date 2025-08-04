@@ -1,0 +1,22 @@
+.left-forgot-screen {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 992px) {
+    .left-forgot-screen {
+        justify-content: center;
+        width: 100%;
+        margin-top: 0px;
+        padding: 3rem;
+    }
+}
+
+/* Small screens (phones) */
+@media (max-width: 576px) {
+    .left-forgot-screen {
+        margin-top: 5rem;
+    }
+}

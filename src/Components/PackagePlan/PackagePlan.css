@@ -1,0 +1,116 @@
+/* src/components/PackagePlan/PackagePlan.css */
+
+.package-plan {
+    width: 345px;
+    height: 350px;
+    border-radius: 12px;
+    position: relative;
+    margin-top: 15px;
+    padding: 20px;
+    margin-left: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    color: #ffffff;
+}
+
+/* Backgrounds for each plan */
+.basic-plan {
+    background-color: #2bc7a5cc;
+}
+
+.essential-plan {
+    background-color: #2bafc7;
+}
+
+.premium-plan {
+    background-color: #1aceef;
+}
+
+.top-icon {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.plan-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.plan-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: #ffffff;
+}
+
+.plan-price {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.plan-list {
+    align-self: flex-start;
+    padding-left: 20px;
+    margin-top: 18px;
+    margin-bottom: 20px;
+}
+
+.plan-list-item {
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 6px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.package-plan-btn {
+    background-color: transparent;
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    margin-top: 34px;
+}
+
+
+.large-plan {
+    width: 450px;
+    height: 438px;
+    padding: 42px 24px;
+    margin-top: 46px;
+    transform: scale(1.02);
+}
+
+.large-plan .plan-title {
+    font-size: 41px;
+}
+
+.large-plan .plan-list-item {
+    font-size: 21px;
+}
+
+.large-plan .package-plan-btn {
+    margin-top: 33px;
+    color: #2BAFC7;
+    background-color: white;
+    font-size: 18px;
+}
+
+/* Optional: spacing/layout for highlighted version */
+.highlighted-basic {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 24px;
+    margin-bottom: 16px;
+    font-family: 'Poppins', sans-serif;
+}

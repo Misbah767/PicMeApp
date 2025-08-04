@@ -1,0 +1,12 @@
+.logoImg {
+    width: 50px;
+    margin-left: 34px;
+    height: 50px;
+}
+
+@media (max-width:786px) {
+    .logoImg {
+        display: none;
+
+    }
+}

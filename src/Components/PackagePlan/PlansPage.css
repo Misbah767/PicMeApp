@@ -1,0 +1,19 @@
+/* src/pages/PlansPage.css */
+
+.plans-wrapper {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    width: 90vw;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10px;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+    .plans-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+}

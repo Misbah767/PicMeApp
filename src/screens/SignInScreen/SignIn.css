@@ -1,0 +1,76 @@
+/* =======================================
+   Main Container
+======================================= */
+.signin-page {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    background-color: white;
+    overflow: hidden;
+}
+
+/* =======================================
+     Left Section (Form Side)
+======================================= */
+.signin-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 50px;
+    position: relative;
+    background-color: white;
+}
+
+/* Logo Placement */
+.logo-wrapper {
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* Center the Form Vertically */
+.form-center {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Form Content Container */
+.signin-content {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+/* =======================================
+     Responsive Layout
+======================================= */
+
+/* For Tablets & Medium Screens */
+@media (max-width: 1024px) {
+    .signup-left {
+        padding: 0 35px;
+    }
+
+    .signin-content {
+        max-width: 300px;
+    }
+}
+
+/* For Tablets & Small Laptops */
+@media (max-width: 768px) {
+    .signup-page {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .signup-left {
+        padding: 20px;
+        align-items: center;
+    }
+
+    .signin-content {
+        max-width: 100%;
+        padding: 0 8px;
+    }
+}

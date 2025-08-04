@@ -1,0 +1,243 @@
+:root {
+    --skyblue-color: #2bafc7;
+    --secondary-color: #ffffff;
+    --gray-light: #f0e9e9;
+    --gray-medium: #747688;
+    --gray-dark: #807a7a;
+    --yellow: #fbbe47;
+    --red: #e53535;
+}
+
+/* =======================================
+   SignIn Wrapper
+======================================= */
+.signin-left {
+    width: 100%;
+    max-width: 420px;
+    margin-left: auto;
+    padding: 24px 22px;
+    border-radius: 16px;
+    background-color: var(--secondary-color);
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+/* Mobile view */
+@media (max-width: 400px) {
+    .signin-left {
+        width: 100%;
+        max-width: 100%;
+        padding: 14px 12px;
+        /* Reduced padding */
+    }
+}
+
+/* =======================================
+   Logo Wrapper
+======================================= */
+.logo-wrapper {
+    padding: 17px 0 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* =======================================
+   Heading
+======================================= */
+.signin-heading {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* =======================================
+   Form
+======================================= */
+.signin-form {
+    display: flex;
+    width: 350px;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.form-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Password Toggle Icon */
+.password-group .toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: var(--gray-medium);
+    font-size: 16px;
+}
+
+/* =======================================
+   Form Options (Remember + Forgot)
+======================================= */
+.form-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-top: 13px;
+    margin-bottom: 15px;
+}
+
+.forgot-password {
+    color: #2BAFC7;
+    text-decoration: none;
+}
+
+.remember-part {
+    display: flex;
+}
+
+.remember-btn {
+    font-size: 13px;
+    margin-left: 7px;
+    margin-top: -2px;
+}
+
+/* =======================================
+   Toggle Switch
+======================================= */
+.switch {
+    position: relative;
+    display: flex;
+    width: 34px;
+    height: 18px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #2BAFC7;
+}
+
+input:checked+.slider:before {
+    transform: translateX(16px);
+}
+
+/* =======================================
+   OR Separator (Modern & Attractive)
+======================================= */
+.or-separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gray-medium);
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.or-separator::before,
+.or-separator::after {
+    content: "";
+    flex: 1;
+    height: 1.5px;
+    background: linear-gradient(to right,
+            rgba(43, 175, 199, 0),
+            rgba(43, 175, 199, 0.6),
+            rgba(43, 175, 199, 0));
+    margin: 0 12px;
+    border-radius: 2px;
+}
+
+.or-separator span {
+    background-color: var(--secondary-color);
+    padding: 0 10px;
+    z-index: 1;
+}
+
+/* =======================================
+   Social Login Button Icons
+======================================= */
+.social-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+/* =======================================
+   Sign Up Prompt
+======================================= */
+.signin-prompt {
+    text-align: center;
+    font-size: 13px;
+    margin-top: 13px;
+}
+
+.signUp-link {
+    color: #2BAFC7;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* =======================================
+   Utility
+======================================= */
+.btn-signin {
+    margin-bottom: 13px !important;
+    margin-top: 13px !important;
+    width: 98%;
+}
+
+/* =======================================
+   Floating Success Message
+======================================= */
+.floating-success {
+    position: absolute;
+    top: 20px;
+    right: -400px;
+    background-color: #d4edda;
+    color: #155724;
+    padding: 12px 24px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    font-weight: 500;
+    transition: right 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+    z-index: 999;
+}
+
+.floating-success.show {
+    right: 20px;
+    opacity: 1;
+}

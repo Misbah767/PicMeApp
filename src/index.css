@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --skyblue-color: #2BAFC7;
+    /* Sky Blue */
+    --secondary-color: #ffffff;
+    /* White */
+
+    /* Grays */
+    --gray-light: #E4DFDF;
+    /* Light Gray - backgrounds, borders */
+    --gray-medium: #747688;
+    /* Medium Gray - paragraph text */
+    --gray-dark: #807A7A;
+    /* Dark Gray - headings or strong labels */
+
+    /* Alerts / Highlights */
+
+
+    --yellow: #FBBE47;
+    /* Warning / highlight */
+    --red: #E53535;
+    /* Error / delete */
+}

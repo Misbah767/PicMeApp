@@ -1,0 +1,29 @@
+.p-screen {
+    width: 100%;
+    max-width: 1125px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.p-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.avatar-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.p-button-group {
+    display: flex;
+    gap: 12px;
+}
+
+.p-body {
+    margin-top: 30px;
+}

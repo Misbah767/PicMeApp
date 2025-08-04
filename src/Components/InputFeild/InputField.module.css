@@ -1,0 +1,123 @@
+:root {
+    --skyblue-color: #2bafc7;
+    --secondary-color: #ffffff;
+    --gray-light: #f0e9e9;
+    --gray-medium: #747688;
+    --gray-dark: #807a7a;
+    --yellow: #fbbe47;
+    --red: #e53535;
+
+    --input-border-default: #E4DFDF;
+}
+
+/* =======================================
+   Input Field Styles
+======================================= */
+
+.fieldGroup {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 1px;
+}
+
+.inputWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    transition: border-color 0.2s ease;
+}
+
+.errorWrapper .iconLeft,
+.errorWrapper .iconRight {
+    color: var(--red);
+}
+
+.input {
+    width: 100%;
+    padding: 12px 40px;
+    /* same as .pg-review-card */
+    border: 1.02px solid #E4DFDF;
+    background-color: #ffffff;
+    border-radius: 14px;
+    /* same radius as review card */
+    height: auto;
+    /* remove fixed height */
+    font-size: 13px;
+    /* same font-size as .pg-review-content */
+    color: #747688;
+    /* same as review text */
+    transition: box-shadow 0.3s ease;
+    box-shadow: none;
+    box-sizing: border-box;
+}
+
+.inputWrapper:hover .input {
+    border-color: #9bdfed;
+}
+
+.input:focus {
+    border-color: var(--skyblue-color);
+    box-shadow: 0 0 0 2px rgba(43, 175, 199, 0.15);
+    outline: none;
+    background-color: #ffffff;
+}
+
+
+.iconLeft {
+    position: absolute;
+    left: 10px;
+    font-size: 0.86rem;
+    top: 12px;
+    color: var(--gray-medium);
+    pointer-events: none;
+}
+
+.iconRight {
+    position: absolute;
+    right: 14px;
+    top: 12px;
+    font-size: 1.2rem;
+    color: var(--gray-medium);
+    cursor: pointer;
+}
+
+
+/* =======================================
+   Error Field Styles
+======================================= */
+
+.errorField {
+    border: 1px solid var(--red);
+    color: var(--red);
+    background-color: var(--secondary-color);
+    /* keep consistent bg */
+}
+
+.errorField:focus {
+    border-color: var(--red);
+    box-shadow: 0 0 0 2px rgba(229, 53, 53, 0.15);
+    outline: none;
+}
+
+.errorIcon {
+    color: var(--red);
+}
+
+.errorField::placeholder {
+    color: #e74c3c;
+}
+
+.inputError {
+    color: var(--red);
+    margin-bottom: -13px;
+    font-size: 11px;
+    margin-top: 1px;
+    font-weight: 500;
+    padding-left: 12px;
+}
+
+.inputWrapper:hover .errorField {
+    border-color: var(--red);
+}

@@ -1,0 +1,16 @@
+/* ================================
+   Home Section
+================================= */
+
+.home {
+    display: flex;
+    height: 100vh;
+    background-color: var(--secondary-color);
+}
+
+/* Responsive: Stack columns on smaller screens */
+@media (max-width: 760px) {
+    .home {
+        flex-direction: column;
+    }
+}

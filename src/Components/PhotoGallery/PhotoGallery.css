@@ -1,0 +1,50 @@
+/* ========== Photo Gallery Section ========== */
+
+.photo-gallery-wrapper {
+    width: 100%;
+    max-width: 1125px;
+    /* Same as navbar */
+    margin: 20px auto 0;
+    box-sizing: border-box;
+}
+
+.photo-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    /* Desktop */
+    gap: 20px;
+    padding: 0 10px 20px;
+    justify-content: center;
+}
+
+.gallery-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+    .photo-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Mobiles (3 per row, reduced height & width) */
+@media (max-width: 768px) {
+    .photo-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .gallery-img {
+        aspect-ratio: 1 / 1;
+        border-radius: 8px;
+    }
+}

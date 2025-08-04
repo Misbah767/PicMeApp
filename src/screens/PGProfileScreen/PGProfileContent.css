@@ -1,0 +1,54 @@
+/* ========== Profile Page Wrapper ========== */
+.pg-profile-wrapper {
+    min-height: 100vh;
+    width: 98vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--light-bg);
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+/* ========== Profile Content Card ========== */
+.pg-profile-content {
+    width: 305px;
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 10px;
+    border-radius: 16px;
+    height: 287px;
+    margin: auto;
+    margin-top: px;
+    margin-bottom: 2px;
+    box-sizing: border-box;
+}
+
+
+
+/* ========== Button Group Below Avatar ========== */
+.button-group {
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1px;
+    flex-wrap: nowrap;
+}
+
+/* ========== Bottom Navbar Wrapper ========== */
+.pg-navbar-wrapper {
+    margin-top: 30px;
+    width: 98vw;
+}
+
+.pg-tab-content {
+    width: 98vw;
+}
+
+.pg-review-main {
+    width: 96vw;
+}

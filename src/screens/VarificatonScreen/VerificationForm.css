@@ -1,0 +1,144 @@
+:root {
+    --skyblue-color: #2bafc7;
+    --secondary-color: #ffffff;
+    --gray-medium: #747688;
+    --gray-light: #e4dfdf;
+}
+
+/* Main container */
+.verification-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 380px;
+    margin: auto;
+    padding: 48px 32px;
+    background-color: var(--secondary-color);
+    border-radius: 16px;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Heading */
+.verification-form h2 {
+    font-size: 39px;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 10px;
+    align-self: flex-start;
+    /* heading thoda chhota aur left */
+}
+
+/* Subtext */
+.info-text,
+.info-text-2 {
+    font-size: 15px;
+    color: var(--gray-medium);
+    margin: 0;
+    margin-bottom: 3px;
+    text-align: left;
+    width: 100%;
+}
+
+.info-text-2 {
+    margin-bottom: 28px;
+}
+
+/* Input section */
+.inputBoxes {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 14px;
+    align-items: center;
+}
+
+.inputmainbox {
+    display: flex;
+    gap: 24px;
+}
+
+
+/* Each input */
+.inputbox {
+    width: 60px;
+    height: 64px;
+    border-radius: 12px;
+    border: 2px solid rgb(200, 228, 240);
+    font-size: 20px;
+    text-align: center;
+
+    outline: none;
+    color: var(--skyblue-color);
+    box-shadow: 0 0 5px rgba(136, 190, 200, 0.4);
+    transition: 0.2s ease;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.inputbox:focus-visible {
+    border-color: var(--skyblue-color);
+    box-shadow: 0 0 5px rgba(43, 175, 199, 0.4);
+}
+
+/* Continue button */
+.btn-verify {
+    width: 100%;
+    height: 48px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 24px;
+}
+
+/* Resend Section */
+.resend-wrapper {
+    width: 100%;
+    text-align: center;
+}
+
+.resend-text,
+.resend-btn {
+    font-size: 14px;
+    color: var(--gray-medium);
+}
+
+.resend-button {
+    color: var(--skyblue-color);
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 6px;
+}
+
+.resend-button:hover {
+    text-decoration: underline;
+}
+
+.resend-btn {
+    color: #999;
+    margin-top: 4px;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .verification-form {
+        padding: 32px 20px;
+    }
+
+    .inputbox {
+        width: 48px;
+        height: 48px;
+    }
+
+    .inputbox {
+        width: 50px;
+        margin-left: 4px;
+        height: 50px;
+    }
+
+    .btn-verify {
+        width: 100%;
+    }
+}
