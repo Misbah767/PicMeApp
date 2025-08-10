@@ -1,10 +1,10 @@
 import React from "react";
 import "./CircleShowcase.css";
 
-import folderimage from "../../assets/images/wallet.png";
-import graphIcon from "../../assets/images/graph.png";
-import euroIcon from "../../assets/images/euro.png";
-import bankIcon from "../../assets/images/bank.png";
+import folderimage from "../../assets/images/Wallet.png";
+import graphIcon from "../../assets/images/Graph.png";
+import euroIcon from "../../assets/images/Euro.png";
+import bankIcon from "../../assets/images/Bank.png";
 import checkIcon from "../../assets/images/Check-input.png";
 
 import smallCircleIcon from "../../assets/images/bigCircle (1).png"; 
