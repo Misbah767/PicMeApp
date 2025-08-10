@@ -1,7 +1,7 @@
 import React from "react";
 import "./CircleShowcase.css";
 
-import folderimage from "../../assets/images/Wallet.png";
+import folderimage from "../../assets/images/wallet.png";
 import graphIcon from "../../assets/images/Graph.png";
 import euroIcon from "../../assets/images/Euro.png";
 import bankIcon from "../../assets/images/Bank.png";
