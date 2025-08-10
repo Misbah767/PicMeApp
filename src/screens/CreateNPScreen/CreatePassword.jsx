@@ -3,7 +3,7 @@ import CreatePassContent from "./CreatePassContent";
 import useCreatePassword from "./useCreatePassword";
 import RightSection from "../../Components/RightSection/RightSection";
 import "./CreatePassword.css"
-import Logo from "../../Components/Logo/Logo";
+import Logo from "../../Components//Logo/Logo";
 import illustration from "../../assets/images/camera.png"; // reuse 
 export default function CreatePassword() {
   const {

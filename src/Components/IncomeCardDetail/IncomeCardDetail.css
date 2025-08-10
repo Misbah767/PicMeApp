@@ -1,0 +1,84 @@
+.income-card-detail {
+    width: 488px;
+    height: 32rem;
+    background-color: #F2FAFC;
+    border-radius: 19.02px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    padding-top: 40px;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.card-heading {
+    margin-bottom: 0;
+    margin-top: 25px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+.income-card-detail form {
+    width: 400px;
+    height: 427px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+}
+
+.income-card-detail input {
+    background-color: var(--secondary-color);
+    border: none;
+    outline: none;
+    box-shadow: none;
+    height: 48px;
+    padding: 0 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.btn-wrapper {
+    margin-top: 10px;
+    margin-bottom: 34px;
+}
+
+@media (max-width: 768px) {
+    .income-card-detail {
+        width: 100%;
+        height: auto;
+        margin-left: 0px;
+        overflow: hidden;
+        padding: 20px 15px;
+    }
+
+    .income-card-detail form {
+        width: 86%;
+        height: auto;
+    }
+
+    .card-heading {
+        font-size: 23px;
+        margin-bottom: 23px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .income-card-detail {
+        width: 95%;
+        padding: 15px 10px;
+    }
+
+    .card-heading {
+        font-size: 16px;
+    }
+
+    .income-card-detail input {
+        font-size: 13px;
+        height: 44px;
+    }
+}

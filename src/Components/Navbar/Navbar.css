@@ -177,3 +177,21 @@
         margin-top: 2px;
     }
 }
+
+/* Navbar.css (minimal for dropdown) */
+.user-nav-link {
+    cursor: pointer;
+    margin-left: 1rem;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.user-nav-link:hover {
+    text-decoration: underline;
+}
+
+.dropdown {
+    color: #E4DFDF;
+}

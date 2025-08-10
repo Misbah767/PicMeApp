@@ -1,0 +1,58 @@
+/* src/pages/YourFolderName/CircleCardDetail.css */
+
+.circle-card-detail-page {
+    background-color: var(--secondary-color);
+    width: 93vw;
+    border-radius: 1.3rem;
+    margin-top: 3rem !important;
+    margin: auto;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    padding: 2rem 0;
+}
+
+.circle-card-detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 95vw;
+    margin-top: 33px !important;
+    gap: 124px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Heading */
+.payament-detail-heading {
+    font-size: 37px;
+    text-align: center;
+    width: 100%;
+    font-weight: 400;
+    color: var(--primary-text-color, #000);
+    margin: 0;
+}
+
+/*  Responsive layout for smaller screens */
+@media (max-width: 992px) {
+    .circle-card-detail {
+        flex-direction: column;
+        gap: 40px;
+        padding: 15px;
+    }
+
+    .payament-detail-heading {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 576px) {
+    .circle-card-detail {
+        gap: 25px;
+        padding: 10px;
+    }
+
+    .payament-detail-heading {
+        font-size: 24px;
+    }
+}

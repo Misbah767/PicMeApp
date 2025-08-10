@@ -4,17 +4,30 @@ import {
   validateEmail,
   validatePassword,
   validateFullName1To3Words,
-} from "../../utils/helper";
-import { setAccessToken } from "../../utils/localStorage";
-import { signUpUser } from "../../api/auth";
+} from "../utils/helper";
+import { setAccessToken, getAccessToken } from "../utils/localStorage"; // getAccessToken bhi import kiya
+import { signUpUser } from "../api/auth";
 import { useNavigate, useSearchParams } from "react-router-dom";
 
 const useSignUp = () => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
-
-  // Read type from URL query param or default to "0"
+  
   const initialType = searchParams.get("type") || "0";
+
+  // Redirect if user already logged in
+  useEffect(() => {
+    const checkAuth = async () => {
+      const token = await getAccessToken();
+      if (token) {
+        const userType = initialType;
+        navigate(userType === "0" ? "/searchLocation" : "/dashboard", {
+          replace: true,
+        });
+      }
+    };
+    checkAuth();
+  }, [navigate, initialType]);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -99,7 +112,7 @@ const useSignUp = () => {
         name: formData.name,
         email: formData.email,
         password: formData.password,
-        type: formData.type,  // send type to backend
+        type: formData.type,  
       };
 
       const res = await signUpUser(payload);

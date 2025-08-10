@@ -1,37 +1,60 @@
-import React, { useState } from "react";
-import { DayPicker } from "react-day-picker";
-import 'react-day-picker/dist/style.css';
-import CalendarIcon from "../../assets/icons/CalenderIcon";
-import CrossIcon from "../../assets/icons/CrossIcon";
-import "./MapCaledderButton.css";
+import React, { useState, useRef, useEffect } from "react";
+import DatePicker from "react-datepicker";
+import { format } from "date-fns";
+import "react-datepicker/dist/react-datepicker.css";
 
-export default function MapCalendarButton({ label, onDateSelect }) {
-  const [showCalendar, setShowCalendar] = useState(false);
+import { FiCalendar, FiX } from "react-icons/fi";
+import "./MapCalendderButton.css";
 
-  const handleSelect = (date) => {
-    setShowCalendar(false);
+export default function MapCalendarButton({ label, onDateSelect, className = "" }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [selected, setSelected] = useState(null);
+  const calendarRef = useRef();
+
+  const toggleCalendar = (e) => {
+    e?.stopPropagation();
+    setIsOpen((prev) => !prev);
+  };
+
+  const handleDateSelect = (date) => {
+    setSelected(date);
+    setIsOpen(false);
     onDateSelect(date);
   };
 
+  // Close calendar on outside click
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (calendarRef.current && !calendarRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   return (
-    <div className="map-calendar-wrapper">
+    <div className={`map-calendar-wrapper ${className}`} ref={calendarRef}>
       <div
-        className="map-calendar-display"
-        onClick={() => setShowCalendar(!showCalendar)}
+        className={`map-calendar-display ${isOpen ? "active" : ""}`}
+        onClick={toggleCalendar}
       >
-        <span className="calendar-label">{label}</span>
-        <span className="calendar-icon">
-          {showCalendar ? <CrossIcon /> : <CalendarIcon />
-}
+        <span className="calendar-label">
+          {selected ? format(selected, "MMM d, yyyy") : label}
+        </span>
+        <span className="calendar-toggle-icon" onClick={toggleCalendar}>
+          {isOpen ? <FiX size={18} /> : <FiCalendar size={18} />}
         </span>
       </div>
 
-      {showCalendar && (
-        <div className="calendar-popup">
-          <DayPicker
-            mode="single"
-            selected={undefined}
-            onSelect={handleSelect}
+      {isOpen && (
+        <div className="calendar-popup calendar-popup-right">
+          <DatePicker
+            selected={selected}
+            onChange={handleDateSelect}
+            inline
+            calendarClassName="custom-calendar"
           />
         </div>
       )}

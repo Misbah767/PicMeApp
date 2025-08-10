@@ -1,0 +1,41 @@
+.logout-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logout-card {
+    background-color: var(--secondary-color);
+    width: 464px;
+    height: 269px;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logout-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logout-close {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.logout-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn-logout-confirm {
+    background-color: var(--dark-red);
+}

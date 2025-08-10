@@ -1,20 +1,31 @@
 .avatar-profile {
-    width: 155px;
-    height: auto;
+    width: 175px;
+    height: 170px;
     background-color: var(--secondary-color);
     border-radius: 10px;
-    padding: 10px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+    padding: 18px;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-sizing: border-box;
+    cursor: pointer;
     text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: none;
+    border: 1px solid var(--gray-light);
 }
+
+.avatar-profile:hover {
+
+    box-shadow: 0 3px 8px rgba(43, 175, 199, 0.25);
+    border-color: var(--skyblue-color);
+    transform: translateY(-0.2px);
+}
+
 
 .avator-image {
     width: 58px;
-    height: 58px;
+    height: 62px;
     margin-bottom: 6px;
 }
 
@@ -75,15 +86,17 @@
 
 @media screen and (max-width: 480px) {
     .avatar-profile {
-        width: 140px;
+        width: 170px;
         align-items: center;
         padding: 5px;
-        height: 160px;
+        height: 170px;
     }
 
     .avatar-icon {
         width: 45px;
         height: 45px;
+        margin: auto;
+        margin-left: 53px;
     }
 
     .avatar-name {

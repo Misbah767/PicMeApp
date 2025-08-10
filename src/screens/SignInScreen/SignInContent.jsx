@@ -1,15 +1,17 @@
 // src/pages/SignIn/SignInContent.js
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom"; // ⬅ Added useSearchParams
+import { FiEye, FiEyeOff } from "react-icons/fi";
+
 import InputField from "../../Components/InputFeild/InputField";
 import SocialButton from "../../Components/SocialButton/SocialButton";
 import Button from "../../Components/Button/Button";
+
 import GoogleIcon from "../../assets/icons/GoogIeIcon";
 import FacebookIcon from "../../assets/icons/FaceBook";
 import PasswordLock from "../../assets/icons/PasswordLock";
 import MailIcon from "../../assets/icons/MailIcon";
-import PasswordShowIcon from "../../assets/icons/PasswordShowIcon";
-import PasswordHideIcon from "../../assets/icons/PasswordHideIcon";
+
 import "./SignInContent.css";
 import { Colors } from "../../constants/Colors";
 
@@ -20,10 +22,15 @@ export default function SignInContent({
   handleChange,
   formData,
   errors = {},
-  type = "0",
+  type: propType, // ⬅ renamed to avoid confusion
   apiError,
   successMessage,
 }) {
+  /* ===== Read current type from URL ===== */
+  const [searchParams] = useSearchParams();
+  const currentType = searchParams.get("type") || propType || "0";
+
+  /* ===== Utility Functions for Icon Styling ===== */
   const getIconColor = (fieldName) =>
     errors[fieldName] ? Colors.red : Colors.grayDark;
 
@@ -33,9 +40,11 @@ export default function SignInContent({
     color: getIconColor(fieldName),
   });
 
+  /* ===== Local State for Toast Messages ===== */
   const [showSuccess, setShowSuccess] = useState(false);
   const [showError, setShowError] = useState(false);
 
+  /* ===== Show success message for 10s ===== */
   useEffect(() => {
     if (successMessage) {
       setShowSuccess(true);
@@ -44,6 +53,7 @@ export default function SignInContent({
     }
   }, [successMessage]);
 
+  /* ===== Show error message for 10s ===== */
   useEffect(() => {
     if (apiError) {
       setShowError(true);
@@ -54,21 +64,22 @@ export default function SignInContent({
 
   return (
     <div className="signin-content">
+      {/* ===== Heading ===== */}
       <h2 className="signin-heading">Sign In</h2>
 
-      {/* Slide-in Messages */}
-      {showSuccess && (
-        <div className="toast-message toast-success">
-          {successMessage}
-        </div>
-      )}
-      {showError && (
-        <div className="toast-message toast-error">
-          {apiError}
-        </div>
-      )}
+      {/* ===== Slide-in Messages (Success & Error) =====
+      // {showSuccess && <div className="toast-message toast-success">{successMessage}</div>}
+     {/* ===== Error Message Banner ===== */}
+         {showError && (
+       <div className="error-banner">
+             <span className="error-icon">⚠️</span>
+                      <span>{apiError}</span>
+              </div>
+             )}
 
+      {/* ===== Sign In Form ===== */}
       <form className="signin-form" onSubmit={handleSubmit} noValidate>
+        {/* ===== Email Input ===== */}
         <div className="input-wrapper">
           <InputField
             type="email"
@@ -81,6 +92,7 @@ export default function SignInContent({
           />
         </div>
 
+        {/* ===== Password Input (with toggle visibility) ===== */}
         <div className="input-wrapper">
           <InputField
             type={showPassword ? "text" : "password"}
@@ -92,9 +104,9 @@ export default function SignInContent({
             rightIcon={
               <span className="toggle-password" onClick={togglePassword}>
                 {showPassword ? (
-                  <PasswordHideIcon {...getIconProps("password")} />
+                  <FiEyeOff size={16} color={getIconColor("password")} />
                 ) : (
-                  <PasswordShowIcon {...getIconProps("password")} />
+                  <FiEye size={16} color={getIconColor("password")} />
                 )}
               </span>
             }
@@ -102,6 +114,7 @@ export default function SignInContent({
           />
         </div>
 
+        {/* ===== Remember Me & Forgot Password ===== */}
         <div className="form-options">
           <label className="remember-part">
             <label className="switch">
@@ -115,18 +128,21 @@ export default function SignInContent({
           </Link>
         </div>
 
+        {/* ===== Sign In Button ===== */}
         <div className="btn-signin">
           <Button variant="filled" type="submit">
             Sign In
           </Button>
         </div>
 
+        {/* ===== OR Separator ===== */}
         <div className="or-separator">
           <div className="line-left"></div>
           <span>OR</span>
           <div className="line-right"></div>
         </div>
 
+        {/* ===== Social Login Buttons ===== */}
         <SocialButton
           type="button"
           icon={<GoogleIcon width="20" height="20" />}
@@ -138,9 +154,10 @@ export default function SignInContent({
           text="Continue with Facebook"
         />
 
+        {/* ===== Sign Up Link ===== */}
         <p className="signin-prompt">
           Don’t have an account?{" "}
-          <Link to={`/signup?type=${encodeURIComponent(type)}`} className="signUp-link">
+          <Link to={`/signup?type=${encodeURIComponent(currentType)}`} className="signUp-link">
             Sign Up
           </Link>
         </p>

@@ -1,0 +1,50 @@
+.P-Detail {
+    display: flex;
+    width: 98vw;
+    margin: auto;
+    background-color: var(--secondary-color);
+    flex-direction: row;
+    gap: 60px;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+.paymentdetail-page {
+    background-color: var(--secondary-color);
+    width: 95vw;
+    border-radius: 1.3rem;
+    margin-top: 3rem !important;
+    margin: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Tablet view */
+@media (max-width: 1024px) {
+    .P-Detail {
+        gap: 40px;
+        padding: 15px;
+    }
+
+    .paymentdetail-page {
+        margin-top: 1rem !important;
+    }
+}
+
+/* Mobile view */
+@media (max-width: 1028px) {
+    .P-Detail {
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+        padding: 10px;
+        align-items: center;
+        margin-bottom: 5rem;
+    }
+
+    .paymentdetail-page {
+        height: auto;
+    }
+}

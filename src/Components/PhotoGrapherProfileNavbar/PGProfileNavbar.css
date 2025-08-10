@@ -1,7 +1,6 @@
 .pg-nav-wrapper {
     width: 100%;
     max-width: 1125px;
-    min-height: 35px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,7 +11,7 @@
     font-family: "Inter", sans-serif;
     box-sizing: border-box;
     padding: 4px 16px;
-    /* Optional: gives breathing room */
+    position: relative;
 }
 
 .pg-nav-left {
@@ -31,7 +30,7 @@
     transition: color 0.3s ease;
 }
 
-.pg-nav-link .pg-nav-icon {
+.pg-nav-icon {
     margin-left: 16px;
     width: 14px;
     height: 14px;
@@ -49,7 +48,6 @@
     color: var(--skyblue-color);
 }
 
-
 .pg-nav-link::after {
     content: "";
     position: absolute;
@@ -66,10 +64,65 @@
     width: 100%;
 }
 
-.pg-category-link {
-    margin-left: auto;
+.pg-nav-right {
+    position: relative;
 }
 
+.pg-category-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.pg-category-button {
+    position: relative;
+    cursor: pointer;
+    color: var(--gray-dark);
+    background-color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    padding: 0;
+    border: none;
+    line-height: 1;
+    transition: color 0.3s ease;
+}
+
+.pg-category-button:hover,
+.pg-nav-icon:hover {
+    color: var(--skyblue-color);
+}
+
+.pg-category-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 8px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+    min-width: 160px;
+}
+
+.pg-category-item {
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    transition: background-color 0.2s ease;
+}
+
+.pg-category-item:hover {
+    background-color: #f2f2f2;
+}
+
+.pg-category-active {
+    font-weight: bold;
+    color: var(--skyblue-color);
+}
+
+/* Responsive */
+/* Existing responsive */
 @media (max-width: 768px) {
     .pg-nav-left {
         margin: auto;
@@ -77,7 +130,13 @@
         margin-bottom: 5px;
     }
 
-    .pg-category-link {
+    .pg-category-button {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+
+    /* Add this to hide category section on mobile */
+    .pg-nav-right {
         display: none;
     }
 }

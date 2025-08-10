@@ -1,0 +1,58 @@
+.userprofile-card-page {
+    background-color: var(--secondary-color);
+    width: 93vw;
+    border-radius: 1.3rem;
+    margin-top: 3rem !important;
+    margin: auto;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    padding: 2rem 0;
+}
+
+/* Heading same style as CircleCardDetail */
+.userprofile-heading {
+    font-size: 37px;
+    text-align: center;
+    width: 100%;
+    font-weight: 400;
+    color: var(--primary-text-color, #000);
+    margin: 0;
+}
+
+/* Card container */
+.userprofile-card {
+    display: flex;
+    flex-direction: column;
+    /* Column instead of row */
+    justify-content: center;
+    align-items: center;
+    width: 95vw;
+    margin-top: 33px !important;
+    gap: 40px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+    .userprofile-card {
+        gap: 30px;
+        padding: 15px;
+    }
+
+    .userprofile-heading {
+        font-size: 28px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .userprofile-card {
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .userprofile-heading {
+        font-size: 24px;
+    }
+}

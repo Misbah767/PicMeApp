@@ -81,8 +81,8 @@
 
 
 .large-plan {
-    width: 450px;
-    height: 438px;
+    width: 460px;
+    height: 488px;
     padding: 42px 24px;
     margin-top: 46px;
     transform: scale(1.02);
@@ -97,7 +97,7 @@
 }
 
 .large-plan .package-plan-btn {
-    margin-top: 33px;
+    margin-top: 73px;
     color: #2BAFC7;
     background-color: white;
     font-size: 18px;
@@ -113,4 +113,105 @@
     font-size: 24px;
     margin-bottom: 16px;
     font-family: 'Poppins', sans-serif;
+}
+
+/* Base Large Plan */
+.large-plan {
+    width: 100%;
+    width: 460px;
+    height: auto;
+    padding: 42px 24px;
+    margin-left: -34px;
+    margin-top: 46px;
+    transform: scale(1.02);
+}
+
+.large-plan .plan-title {
+    font-size: 41px;
+}
+
+.large-plan .plan-list-item {
+    font-size: 21px;
+}
+
+.large-plan .package-plan-btn {
+    margin-top: 73px;
+    color: #2BAFC7;
+    background-color: white;
+    font-size: 18px;
+}
+
+/* Tablet Landscape & Small Laptop */
+@media (max-width: 1024px) {
+    .large-plan {
+        max-width: 420px;
+        padding: 32px 20px;
+        margin-top: 30px;
+        margin-left: 0px;
+        transform: scale(1);
+    }
+
+    .large-plan .plan-title {
+        font-size: 34px;
+    }
+
+    .large-plan .plan-list-item {
+        font-size: 18px;
+    }
+
+    .large-plan .package-plan-btn {
+        margin-top: 50px;
+        font-size: 16px;
+    }
+}
+
+/* Tablet Portrait & Big Phones */
+@media (max-width: 768px) {
+    .large-plan {
+        max-width: 360px;
+        padding: 28px 18px;
+        margin-top: 25px;
+        height: auto;
+    }
+
+    .large-plan .plan-title {
+        font-size: 26px;
+    }
+
+    .large-plan .plan-list-item {
+        font-size: 16px;
+    }
+
+    .large-plan .package-plan-btn {
+        margin-top: 40px;
+        font-size: 15px;
+    }
+}
+
+/* Mobile Phones */
+/* Mobile Phones */
+@media (max-width: 480px) {
+    .large-plan {
+        max-width: 100%;
+        padding: 20px 15px;
+        margin-top: 20px;
+        border-radius: 10px;
+    }
+
+    .large-plan .plan-title {
+        font-size: 22px;
+    }
+
+    .large-plan .plan-list-item {
+        font-size: 14px;
+    }
+
+    .large-plan .package-plan-btn {
+        margin-top: 30px;
+        font-size: 14px;
+        padding: 10px 0;
+
+        /* Add this line to hide button on mobile */
+        display: none;
+    }
 }

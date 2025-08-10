@@ -1,14 +1,16 @@
 /* ================================
    Home Section
 ================================= */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
 
 .home {
     display: flex;
     height: 100vh;
     background-color: var(--secondary-color);
+    font-family: "Poppins";
 }
 
-/* Responsive: Stack columns on smaller screens */
+/* Responsive: */
 @media (max-width: 760px) {
     .home {
         flex-direction: column;

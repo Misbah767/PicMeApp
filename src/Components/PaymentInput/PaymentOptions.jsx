@@ -18,5 +18,5 @@ const PaymentOptions = ({ selectedOption, setSelectedOption }) => {
     </div>
   );
 };
-s
+
 export default PaymentOptions;

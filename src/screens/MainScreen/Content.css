@@ -30,7 +30,7 @@
      Heading Text
   ======================================= */
 .heading-text {
-    font-family: "Poppins", sans-serif;
+    font-family: var(--font-family);
     font-size: 33px;
     line-height: 1;
     color: #222;
@@ -42,6 +42,7 @@
 .heading-text .line2,
 .heading-text .line3 {
     margin-top: 15px;
+    font-family: var(--font-family);
 }
 
 .mainspan {

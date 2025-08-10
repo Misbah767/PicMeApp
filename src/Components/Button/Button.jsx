@@ -8,7 +8,7 @@ export default function Button({
   onClick,
   leftIcon,
   disabled = false,
-  className = "", // 👈 add this
+  className = "", 
 }) {
   const classNames =
     variant === "filled"

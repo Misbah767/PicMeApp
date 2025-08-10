@@ -1,42 +1,80 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./SearchInput.css";
-import SearchIcon from "../../assets/icons/SearchIcon"; // Goes to left
-import ControlPanelIcon from "../../assets/icons/ControlPanel"; // Goes to right
+import SearchIcon from "../../assets/icons/SearchIcon";
+import ControlPanelIcon from "../../assets/icons/ControlPanel";
 import CategoryDropdown from "./CategoryDropdown";
+import { useCategories } from "../../hooks/useCategories";
 
-const SearchInput = () => {
-  const [showPopup, setShowPopup] = useState(false);
-  const popupRef = useRef(null);
+const SearchInput = ({ onNameSearch, onCategorySelect }) => {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [showDropdown, setShowDropdown] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  const dropdownRef = useRef(null);
 
-  const handleOutsideClick = (e) => {
-    if (popupRef.current && !popupRef.current.contains(e.target)) {
-      setShowPopup(false);
-    }
-  };
+  const { categories, loading } = useCategories();
 
   useEffect(() => {
-    document.addEventListener("mousedown", handleOutsideClick);
-    return () => document.removeEventListener("mousedown", handleOutsideClick);
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setShowDropdown(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
+
+  const handleInputChange = (e) => {
+    const value = e.target.value;
+    setSearchTerm(value);
+    onNameSearch(value);
+  };
+
+  const toggleDropdown = () => {
+    setShowDropdown((prev) => !prev);
+  };
+
+  const handleCategorySelect = (category) => {
+    setSelectedCategory(category);
+    onCategorySelect(category);
+    setShowDropdown(false); // select karte hi close
+  };
+
+  const handleClearCategory = () => {
+    setSelectedCategory(null);
+    onCategorySelect(null); // clear category at parent
+    setShowDropdown(false); // clear karte hi close
+  };
 
   return (
     <div className="search-input-wrapper">
-      {/* Left icon (Search) */}
       <div className="left-icon-section">
         <SearchIcon />
       </div>
 
-      {/* Input field */}
-      <input className="search-input" placeholder="Search..." />
+      <input
+        className="search-input"
+        placeholder="Search..."
+        value={searchTerm}
+        onChange={handleInputChange}
+      />
 
-      {/* Right icon (Control Panel) with divider */}
-      <div
-        className="right-icon-section"
-        onClick={() => setShowPopup(!showPopup)}
-      >
+      <div className="right-icon-section">
         <span className="divider" />
-        <ControlPanelIcon />
-        {showPopup && <CategoryDropdown innerRef={popupRef} />}
+        <div onClick={toggleDropdown} style={{ cursor: "pointer" }}>
+          <ControlPanelIcon />
+        </div>
+
+        {showDropdown && !loading && (
+          <div ref={dropdownRef}>
+            <CategoryDropdown
+              options={categories}
+              onSelect={handleCategorySelect}
+              selectedCategory={selectedCategory}
+              onClearCategory={handleClearCategory}
+            />
+          </div>
+        )}
       </div>
     </div>
   );

@@ -1,0 +1,65 @@
+.payment-method-card {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
+.pmc-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.pmc-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.btn-remove {
+    position: absolute;
+    right: 0;
+    width: 127px;
+    height: 44px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.pmc-inputs {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.pmc-left,
+.pmc-right {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.pmc-footer {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-logout {
+    width: 268px;
+    height: 56px;
+    border-radius: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .pmc-inputs {
+        flex-direction: column;
+    }
+}

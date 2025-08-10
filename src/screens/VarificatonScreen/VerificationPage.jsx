@@ -1,4 +1,4 @@
-// src/screens/VarificatonScreen/VerificationPage.jsx
+
 import React from "react";
 import Logo from "../../Components/Logo/Logo";
 import RightSection from "../../Components/RightSection/RightSection";

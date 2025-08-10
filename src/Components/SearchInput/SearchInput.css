@@ -7,7 +7,6 @@
     padding: 10px 12px;
     width: 100%;
     max-width: 400px;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
     border: 1px solid var(--gray-light);
 }
 
@@ -43,4 +42,29 @@
     background-color: #ccc;
     margin-right: 10px;
     /* spacing between line and icon */
+}
+
+.search-input::placeholder {
+    color: var(--gray-medium) !important;
+}
+
+.search-input::placeholder {
+    color: var(--gray-light) !important;
+    opacity: 1;
+    /* Firefox ke liye */
+}
+
+.search-input::-webkit-input-placeholder {
+    color: grey !important;
+    /* Chrome, Safari, Edge */
+}
+
+.search-input:-ms-input-placeholder {
+    color: grey !important;
+    /* Internet Explorer 10-11 */
+}
+
+.search-input::-ms-input-placeholder {
+    color: grey !important;
+    /* Microsoft Edge */
 }

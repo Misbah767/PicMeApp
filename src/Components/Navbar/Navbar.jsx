@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from "react";
+// src/components/Navbar/Navbar.jsx
+import React from "react";
 import { NavLink } from "react-router-dom";
-import "./Navbar.css";
-
+import WhiteLogo from "../WhiteLogo/WhiteLogo";
 import HomeIcon from "../../assets/icons/HomeIcon";
 import ChatIcon from "../../assets/icons/ChatIcon";
 import ProfileIcon from "../../assets/icons/ProfileIcon";
-import WhiteLogo from "../WhiteLogo/WhiteLogo";
+import useNavbar from "../../hooks/useNavbar";
+import "./Navbar.css";
 
-// Hook to detect screen size
 function useIsMobile() {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isMobile, setIsMobile] = React.useState(window.innerWidth < 768);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
@@ -22,11 +22,12 @@ function useIsMobile() {
 
 export default function Navbar() {
   const isMobile = useIsMobile();
+  const { handleLogout } = useNavbar(); // 
 
   const getIconProps = () => ({
     width: 20,
     height: 20,
-    color: isMobile ? "#807A7A" : "#ffffff", // Gray on mobile, white on desktop
+    color: isMobile ? "#807A7A" : "#ffffff",
   });
 
   return (
@@ -49,6 +50,16 @@ export default function Navbar() {
             <ProfileIcon {...getIconProps()} />
             <span className="navLinkText">Profile</span>
           </NavLink>
+
+          {/* 🔥 Logout Button */}
+          <div
+            className="nav-link"
+            onClick={handleLogout}
+            style={{ cursor: "pointer" }}
+          >
+            <ProfileIcon {...getIconProps()} />
+            <span className="navLinkText">Logout</span>
+          </div>
         </div>
       </nav>
 
@@ -56,21 +67,27 @@ export default function Navbar() {
       <div className="navbar-mobile">
         <NavLink
           to="/"
-          className={({ isActive }) => "mobile-link" + (isActive ? " active" : "")}
+          className={({ isActive }) =>
+            "mobile-link" + (isActive ? " active" : "")
+          }
         >
           <HomeIcon {...getIconProps()} />
           <span>Home</span>
         </NavLink>
         <NavLink
           to="/chat"
-          className={({ isActive }) => "mobile-link" + (isActive ? " active" : "")}
+          className={({ isActive }) =>
+            "mobile-link" + (isActive ? " active" : "")
+          }
         >
           <ChatIcon {...getIconProps()} />
           <span>Chat</span>
         </NavLink>
         <NavLink
           to="/profile"
-          className={({ isActive }) => "mobile-link" + (isActive ? " active" : "")}
+          className={({ isActive }) =>
+            "mobile-link" + (isActive ? " active" : "")
+          }
         >
           <ProfileIcon {...getIconProps()} />
           <span>Profile</span>

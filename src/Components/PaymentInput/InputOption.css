@@ -1,4 +1,5 @@
 .input-option-wrapper {
+    width: 100%;
     width: 415px;
     height: 56px;
     background-color: var(--secondary-color);
@@ -13,11 +14,25 @@
     transition: all 0.3s ease;
 }
 
-
-/* .input-option-wrapper.selected {
+/* Hover effect */
+.input-option-wrapper:hover {
     border-color: var(--skyblue-color);
-} */
+    box-shadow: 0 0 6px rgba(43, 175, 199, 0.3);
+    background-color: #f9f9f9;
+}
 
+/* Active / selected state */
+.input-option-wrapper.selected {
+    border-color: var(--skyblue-color);
+    background-color: rgba(43, 175, 199, 0.08);
+}
+
+/* Focus style (for keyboard navigation) */
+.input-option-wrapper:focus {
+    outline: none;
+    border-color: var(--skyblue-color);
+    box-shadow: 0 0 8px rgba(43, 175, 199, 0.4);
+}
 
 .icon {
     font-size: 20px;
@@ -38,9 +53,44 @@
     transition: all 0.2s ease;
 }
 
+/* When selected, make the border bolder */
+.input-option-wrapper.selected .custom-radio {
+    border-color: var(--skyblue-color);
+    background-color: rgba(43, 175, 199, 0.15);
+}
+
 .custom-radio .dot {
     width: 10px;
     height: 10px;
     background-color: var(--skyblue-color);
     border-radius: 50%;
+}
+
+/* Hide dot if not selected */
+.custom-radio .dot.hidden {
+    display: none;
+}
+
+/* Tablet adjustments */
+@media (max-width: 992px) {
+    .input-option-wrapper {
+        height: 50px;
+        max-width: 300px;
+        padding: 0 12px;
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 576px) {
+    .input-option-wrapper {
+        width: 300px;
+        height: auto;
+        padding: 12px;
+        flex-direction: row;
+        gap: 8px;
+    }
+
+    .label-text {
+        margin-left: 13;
+    }
 }

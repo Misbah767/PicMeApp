@@ -1,25 +1,26 @@
 /* ========== MAIN STYLES ========== */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
 
 .pgl-wrapper {
-    width: 90vw;
     height: 87vh;
+    width: 32vw;
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
-    padding: 0;
-    margin: auto;
-    margin-top: 6px;
-    overflow: hidden;
+    margin-top: -32px;
+    margin-left: 65px;
+    position: fixed;
     box-sizing: border-box;
     flex-wrap: wrap;
+    font-family: var(--font-family);
 }
 
 .innerpart {
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     max-height: calc(100vh - 20px);
     background-color: var(--secondary-color);
-    padding: 20px;
+    padding: 25px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -27,26 +28,35 @@
     overflow: hidden;
     overflow-y: auto;
     border-radius: 12px;
-
-
     margin: 10px 0 10px auto;
-
+    font-family: var(--font-family);
+    height: 81vh;
 
 }
 
 .pgl-heading {
-    margin-top: 17px;
-    font-size: 26px;
+    margin-top: 24px;
+    font-size: 30px;
     font-weight: 600;
-    color: var(--skyblue-color);
+
 }
 
 .pgl-description {
     margin-top: 1px;
     font-size: 14px;
     line-height: 1.5;
+    font-family: var(--font-family);
     color: var(--gray-medium);
     width: 100%;
+}
+
+.pgl-description-2 {
+    margin-top: -13px;
+    font-size: 14px;
+    width: 100%;
+    line-height: 1.5;
+    font-family: var(--font-family);
+    color: (var(--gray-medium)) !important;
 }
 
 .avatar-list-container {
@@ -56,6 +66,7 @@
     grid-template-columns: repeat(2, 1fr);
     column-gap: 12px;
     row-gap: 16px;
+    font-family: var(--font-family);
     justify-content: center;
     align-items: center;
     margin: 24px auto 0;
@@ -87,6 +98,15 @@
         font-size: 13px;
     }
 
+    .pgl-description-2 {
+        margin-top: -19px;
+        font-size: 14px;
+        width: 100%;
+        line-height: 1.5;
+        font-family: var(--font-family);
+        color: (var(--gray-medium)) !important;
+    }
+
     .avatar-list-container {
         grid-template-columns: repeat(2, 1fr);
         margin: 20px auto 0;
@@ -96,13 +116,16 @@
 @media screen and (max-width: 480px) {
     .pgl-wrapper {
         width: 100vw;
-        margin-top: -3px;
+        margin-top: -42px;
+        height: 105vh;
+        margin-left: -23px;
         background-color: var(--secondary-color);
     }
 
     .innerpart {
         padding: 5px;
         margin-top: 5px;
+        height: 115vh;
         padding-top: 0;
     }
 
@@ -116,10 +139,26 @@
         margin-bottom: 34px;
     }
 
+    .pgl-description-2 {
+        margin-top: -23px;
+        font-size: 14px;
+        width: 100%;
+        line-height: 1.5;
+        font-family: var(--font-family);
+        color: (var(--gray-medium)) !important;
+    }
+
     .avatar-list-container {
         grid-template-columns: repeat(2, 1fr);
         column-gap: 8px;
         row-gap: 16px;
         margin: 16px auto 0;
     }
+}
+
+
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 17px;
 }

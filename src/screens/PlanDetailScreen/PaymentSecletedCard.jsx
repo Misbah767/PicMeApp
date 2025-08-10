@@ -1,26 +1,16 @@
 import React, { useState } from "react";
 import PaymentOptions from "../../Components/PaymentInput/PaymentOptions";
-import { useNavigate, useLocation } from "react-router-dom";
 import "./PaymentSelectedCard.css";
 
-const PaymentSelectedCard = () => {
+const PaymentSelectedCard = ({ onContinue }) => {
   const [selectedOption, setSelectedOption] = useState("");
-  const navigate = useNavigate();
-  const location = useLocation();
 
   const handleContinue = () => {
     if (!selectedOption) {
       alert("Please select a payment method first.");
       return;
     }
-
-    const plan = location.state?.selectedPlan;
-    navigate("/schedule", {
-      state: {
-        selectedPayment: selectedOption,
-        selectedPlan: plan,
-      },
-    });
+    onContinue(selectedOption); 
   };
 
   return (

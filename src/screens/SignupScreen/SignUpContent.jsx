@@ -133,9 +133,14 @@ export default function SignUpContent({
 
         <p className="signup-prompt">
           Already have an account?{" "}
-          <Link to="/signin" className="signUp-link">
+          {/* <Link to="/signin" className="signUp-link" >
             Sign In
-          </Link>
+          </Link> */}
+         <Link to={`/signin?type=${formData.type}`} className="signUp-link">
+  Sign In
+</Link>
+
+
         </p>
       </form>
     </div>

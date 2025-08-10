@@ -1,0 +1,69 @@
+/* Same as circle-card-detail-page styling but with updated class names */
+.booking-card-detail-page {
+    background-color: var(--secondary-color);
+    width: 93vw;
+    border-radius: 1.3rem;
+    margin-top: 3rem !important;
+    margin: auto;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    padding: 2rem 0;
+}
+
+/* Heading same styling as .payament-detail-heading */
+.booking-detail-heading {
+    font-size: 37px;
+    text-align: center;
+    width: 100%;
+    font-weight: 400;
+    color: var(--primary-text-color, #000);
+    margin: 0;
+}
+
+.booking-card-detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 95vw;
+    margin-top: 33px !important;
+    gap: 124px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.booking-image {
+    width: 300px;
+    height: auto;
+    border-radius: 1rem;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/*  Responsive layout for smaller screens */
+@media (max-width: 992px) {
+    .booking-card-detail {
+        flex-direction: column;
+        gap: 40px;
+        padding: 15px;
+    }
+
+    .booking-detail-heading {
+        font-size: 28px;
+    }
+
+    .booking-image {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .booking-card-detail {
+        gap: 25px;
+        padding: 10px;
+    }
+
+    .booking-detail-heading {
+        font-size: 24px;
+    }
+}

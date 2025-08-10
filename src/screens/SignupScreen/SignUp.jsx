@@ -1,8 +1,7 @@
-// src/pages/SignUpScreen/SignUp.jsx
 import React, { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import SignUpContent from "./SignUpContent";
-import useSignUp from "./useSignUp";
+import useSignUp from "../../hooks/useSignUp";
 import "../SignInScreen/SignIn.css";
 import "./SignUp.css";
 import RightSection from "../../Components/RightSection/RightSection";

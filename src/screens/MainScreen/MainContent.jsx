@@ -1,4 +1,4 @@
-// src/components/MainContent/MainContent.jsx
+
 import React from "react";
 import Buttons from "./MainButtons";
 import Logo from "../../Components/Logo/Logo";

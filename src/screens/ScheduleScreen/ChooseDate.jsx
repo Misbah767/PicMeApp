@@ -4,25 +4,21 @@ import { format } from 'date-fns';
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
 import './ChooseDate.css';
-import Button from '../../Components/Button/Button';
 
 export default function ChooseDate() {
   const [range, setRange] = useState([
     {
-      startDate: new Date(),
-      endDate: new Date(),
-      key: 'selection',
-    },
+      startDate: new Date('2024-07-16'),
+      endDate: new Date('2024-07-18'),
+      key: 'selection'
+    }
   ]);
-
-  const handleSelect = (ranges) => {
-    setRange([ranges.selection]);
-  };
 
   return (
     <div className="calendar-container">
       <h2 className="calendar-title">Choose Date</h2>
 
+      {/* Booking From / To */}
       <div className="booking-range">
         <div>
           Booking From
@@ -39,17 +35,18 @@ export default function ChooseDate() {
         </div>
       </div>
 
-      <div className="main-calander">
+      {/* Calendar */}
+      <div className="calendar-wrapper">
         <DateRange
-          ranges={range}
-          onChange={handleSelect}
-          moveRangeOnFirstSelection={false}
           editableDateInputs={true}
-          className="custom-calendar"
+          onChange={item => setRange([item.selection])}
+          moveRangeOnFirstSelection={false}
+          ranges={range}
+          rangeColors={['#2BAFC7']} // tumhare skyblue color ke liye
         />
       </div>
 
-      <Button variant='filled' className='calander-btn'>Continue</Button>
+      <button className="calander-btn">CONTINUE</button>
     </div>
   );
 }

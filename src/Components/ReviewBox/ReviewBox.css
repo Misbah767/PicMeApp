@@ -2,10 +2,16 @@
 .pg-review-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  width: 85vw;
-  margin: auto;
-  padding: 20px;
+  row-gap: 21px;
+  column-gap: 14px;
+  padding: 0 10px 10px;
+  justify-content: center;
+}
+
+.review-wrapper {
+  width: 100%;
+  max-width: 1125px;
+  margin: 23px auto 0;
   box-sizing: border-box;
 }
 
