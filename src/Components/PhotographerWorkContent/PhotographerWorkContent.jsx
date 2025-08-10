@@ -176,8 +176,8 @@ import React, { useEffect, useState, useMemo } from "react";
 import PhotoGallery from "../PhotoGallery/PhotoGallery";
 import VideoGallery from "../VideoGallery/VideoGallery";
 import ReviewBox from "../ReviewBox/ReviewBox";
-import sampleImages from "../../constants/sampleImages";
-import sampleVideos from "../../constants/SampleVideos";
+import SampleImages from "../../constants/SampleImages";
+import SampleVideos from "../../constants/SampleVideos";
 import reviewData from "../ReviewBox/reviewData";
 import { getPhotographerWork } from "../../api/photographersAPi";
 
@@ -228,14 +228,14 @@ const PhotographerWorkContent = ({
         }
 
         if (extractedPhotos.length === 0) {
-          extractedPhotos = sampleImages.map((img) => ({
+          extractedPhotos = SampleImages.map((img) => ({
             url: img,
             category: "", // sample data category empty
           }));
         }
 
         if (extractedVideos.length === 0) {
-          extractedVideos = sampleVideos.map((vid) => ({
+          extractedVideos = SampleVideos.map((vid) => ({
             url: vid,
             category: "", // sample data category empty
           }));
@@ -254,13 +254,13 @@ const PhotographerWorkContent = ({
         setAllCategories(unique);
       } catch (error) {
         setPhotos(
-          sampleImages.map((img) => ({
+          SampleImages.map((img) => ({
             url: img,
             category: "",
           }))
         );
         setVideos(
-          sampleVideos.map((vid) => ({
+          SampleVideos.map((vid) => ({
             url: vid,
             category: "",
           }))
