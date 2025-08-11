@@ -6,7 +6,7 @@ import CrossIcon from "../../assets/icons/CrossIcon";
 import AvatarProfile from "../../Components/AvatorFile/AvatorProfile";
 import { searchAvailablePhotographers } from "../../api/photographersAPi";
 import { useCategories } from "../../hooks/useCategories";
-import "./PglContent.css"
+import "../../styles/PglContent.css"
 const PGLContent = ({ photographers = [], startDate, endDate, latitude, longitude }) => {
   const [allPhotographers, setAllPhotographers] = useState([]);
   const [filteredPhotographers, setFilteredPhotographers] = useState([]);
