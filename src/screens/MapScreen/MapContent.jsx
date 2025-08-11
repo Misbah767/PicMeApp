@@ -8,7 +8,6 @@ import { searchAvailablePhotographers } from "../../api/photographersAPi";
 import "./MapContent.css";
 import Button from "../../Components/Button/Button";
 import PGLContent from "../PGScreen/PGLContent";
-
 export default function MapContent() {
   const [fromDate, setFromDate] = useState(null);
   const [toDate, setToDate] = useState(null);
