@@ -7,9 +7,8 @@ const useNavbar = () => {
   const logout = useLogout();
 
   const handleLogout = (event) => {
-    event.preventDefault(); //  prevent default behavior
-
-    logout(); // remove all localStorage
+    event.preventDefault(); 
+    logout();
     console.log("🚪 Logged out");
     navigate("/"); //  redirect to Home
   };

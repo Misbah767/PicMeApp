@@ -8,6 +8,7 @@ import { searchAvailablePhotographers } from "../../api/photographersAPi";
 import "./MapContent.css";
 import Button from "../../Components/Button/Button";
 import PGLContent from "../PGScreen/PGLContent";
+
 export default function MapContent() {
   const [fromDate, setFromDate] = useState(null);
   const [toDate, setToDate] = useState(null);
@@ -40,7 +41,6 @@ export default function MapContent() {
 
           console.log("API Response:", response);
 
-          // s Fix: set correct data path
           setPhotographers(response?.data || []);
         } catch (err) {
           console.error("Error fetching photographers:", err);
@@ -79,7 +79,13 @@ export default function MapContent() {
             </div>
 
             {/* Loading state */}
-            {loading && <p>Loading photographers...</p>}
+           {/* Loading state */}
+                  {loading && (
+              <div style={{ width: "100%", textAlign: "left" }}>
+              <LoadingDots />
+                   </div>
+                )}
+
 
             {/* No photographers */}
             {!loading && fromDate && toDate && photographers.length === 0 && (
@@ -108,5 +114,18 @@ export default function MapContent() {
         )}
       </div>
     </div>
+  );
+}
+
+function LoadingDots() {
+  return (
+    <p className="map-loading-text">
+      Loading photographers
+      <span className="map-loading-dots">
+        <span className="map-dot" />
+        <span className="map-dot" />
+        <span className="map-dot" />
+      </span>
+    </p>
   );
 }

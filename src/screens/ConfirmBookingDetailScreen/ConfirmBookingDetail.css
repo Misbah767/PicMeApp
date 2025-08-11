@@ -1,4 +1,6 @@
-/* Same as circle-card-detail-page styling but with updated class names */
+/*================================
+ BOOKING DETAIL CARD PAGE
+===================================*/
 .booking-card-detail-page {
     background-color: var(--secondary-color);
     width: 93vw;
@@ -10,7 +12,7 @@
     padding: 2rem 0;
 }
 
-/* Heading same styling as .payament-detail-heading */
+/* Heading same styling  */
 .booking-detail-heading {
     font-size: 37px;
     text-align: center;
@@ -52,9 +54,7 @@
         font-size: 28px;
     }
 
-    .booking-image {
-        max-width: 100%;
-    }
+
 }
 
 @media (max-width: 576px) {
@@ -64,6 +64,22 @@
     }
 
     .booking-detail-heading {
-        font-size: 24px;
+        display: none;
+    }
+
+    .booking-card-detail-page {
+        background-color: var(--secondary-color);
+        width: 93vw;
+        border-radius: 1.3rem;
+        margin-top: 3rem !important;
+        margin: auto;
+        justify-content: center;
+        box-shadow: none;
+        padding: 2rem 0;
+    }
+
+    .booking-image {
+        width: 220px;
+        height: 300px;
     }
 }

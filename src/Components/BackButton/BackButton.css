@@ -1,0 +1,21 @@
+.back-button {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    width: 200px !important;
+    z-index: 1000;
+    border: none;
+    display: none;
+}
+
+/* Mobile screen par show karne ke liye (max-width 768px ya apni choice) */
+@media (max-width: 768px) {
+    .back-button {
+        display: flex;
+    }
+}

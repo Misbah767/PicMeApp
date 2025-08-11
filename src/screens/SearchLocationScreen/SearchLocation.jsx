@@ -12,7 +12,7 @@ export default function SearchLocation() {
   const navigate = useNavigate(); 
 
   const handleChooseLocation = () => {
-    navigate("/Map"); //  navigate to /Map
+    navigate("/Map");
   };
 
   return (

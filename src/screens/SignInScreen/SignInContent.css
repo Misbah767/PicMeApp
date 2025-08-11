@@ -21,9 +21,7 @@
     }
 }
 
-/* =======================================
-   Logo Wrapper
-======================================= */
+
 .logo-wrapper {
     padding: 17px 0 0;
     display: flex;
@@ -31,7 +29,7 @@
 }
 
 /* =======================================
-   Heading
+   Heading +form
 ======================================= */
 .signin-heading {
     font-size: 26px;
@@ -40,9 +38,7 @@
     text-align: left;
 }
 
-/* =======================================
-   Form
-======================================= */
+
 .signin-form {
     display: flex;
     width: 350px;
@@ -239,7 +235,6 @@ input:checked+.slider:before {
     flex-shrink: 0;
 }
 
-/* Slide in from right, pause, then slide out to right */
 @keyframes slideInOut {
     0% {
         transform: translateX(300px);

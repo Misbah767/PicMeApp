@@ -1,3 +1,4 @@
+/* Map Screen Styles */
 .map-content {
   width: 95vw;
   height: 80vh;
@@ -115,9 +116,67 @@
 
 .show-list-btn {
   margin-top: 17rem;
-  margin-left: 12rem;
+  margin-left: 12.5rem;
   background-color: var(--skyblue-color);
   border: 2px solid var(--secondary-color);
   width: 200px;
 
+}
+
+/* loadign dots  */
+.map-loading-dots {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 2px;
+}
+
+.map-loading-dots .map-dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.map-loading-dots .map-dot:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.map-loading-dots .map-dot:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+/* Loading text color  */
+.map-loading-text {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 4px !important;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--skyblue-color);
+  width: 100%;
+}
+
+/* Dots color & shadow */
+.map-loading-dots .map-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--skyblue-color);
+  opacity: 0.3;
+  margin-left: 6px;
+  animation: dotGlow 1.5s infinite ease-in-out;
+  box-shadow: 0 0 8px #fff;
+}
+
+@keyframes dotGlow {
+
+  0%,
+  80%,
+  100% {
+    opacity: 0.3;
+    box-shadow: none;
+  }
+
+  40% {
+    opacity: 1;
+    box-shadow: 0 0 8px #fff;
+  }
 }

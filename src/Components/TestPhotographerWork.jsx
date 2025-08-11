@@ -1,9 +1,6 @@
 // src/pages/TestPhotographerWork.jsx
 import React, { useEffect, useState } from "react";
 import { searchAvailablePhotographers } from "../api/photographersAPi"; 
-// ya jahan aapka file ho wahan se import karen
-
-
 const TestPhotographerWork = () => {
   const [workData, setWorkData] = useState(null);
   const [loading, setLoading] = useState(true);

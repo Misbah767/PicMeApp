@@ -1,3 +1,4 @@
+/* profiel page center navbar */
 .pg-nav-wrapper {
     width: 100%;
     max-width: 1125px;
@@ -135,7 +136,7 @@
         padding: 6px 12px;
     }
 
-    /* Add this to hide category section on mobile */
+  
     .pg-nav-right {
         display: none;
     }

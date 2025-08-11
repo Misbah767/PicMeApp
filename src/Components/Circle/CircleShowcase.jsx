@@ -1,12 +1,12 @@
 import React from "react";
 import "./CircleShowcase.css";
-
+// main big images
 import folderimage from "../../assets/images/wallet.png";
 import graphIcon from "../../assets/images/Graph.png";
 import euroIcon from "../../assets/images/Euro.png";
 import bankIcon from "../../assets/images/Bank.png";
 import checkIcon from "../../assets/images/Check-input.png";
-
+// small icons images
 import smallCircleIcon from "../../assets/images/bigCircle (1).png"; 
 import rectangleIcon from "../../assets/images/rectangle.png";
 import bottomLeftCircleIcon from "../../assets/images/bigCircle (2).png";

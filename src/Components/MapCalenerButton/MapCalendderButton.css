@@ -10,13 +10,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: white;
+    background: var(--secondary-color);
     border-radius: 10px;
     padding: 12px 14px;
     cursor: pointer;
     width: 100%;
     font-size: 14px;
-    color: #666;
+    color: var(--gray-light);
     border: 1px solid #e0f4f8;
     box-shadow: 0 2px 6px rgba(43, 175, 199, 0.08);
     transition: all 0.25s ease;
@@ -36,8 +36,8 @@
 .react-datepicker__time-name {
     color: #000;
     display: inline-block;
-    width: 1.4rem;
-    line-height: 1.7rem;
+    width: 1.45rem;
+    line-height: 1.75rem;
     margin-top: 2px !important;
     text-align: center;
     margin: 0.176rem;
@@ -62,14 +62,14 @@
 .react-datepicker__year-read-view--down-arrow:hover,
 .react-datepicker__month-read-view--down-arrow:hover,
 .react-datepicker__month-year-read-view--down-arrow:hover {
-    border-color: white !important;
+    border-color: var(--secondary-color) !important;
 }
 
 
 /* ==== Label ==== */
 .calendar-label {
     font-weight: 500;
-    color: #555;
+    color: var(--gray-dark);
     font-size: 14px !important;
 }
 
@@ -90,25 +90,25 @@
 .rdp-day,
 .custom-calendar .react-datepicker__day {
     width: 24px !important;
-    height: 26px !important;
+    height: 25px !important;
     font-size: 10px !important;
-    margin: 3px !important;
-    padding: 0 !important;
+    text-align: center !important;
+    padding-left: 0px;
     border-radius: 50% !important;
     transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease !important;
 }
 
 .rdp-day:hover,
 .custom-calendar .react-datepicker__day:hover {
-    background-color: #e9f9fc !important;
+    background-color: var(--secondary-color) !important;
     box-shadow: inset 0 0 4px rgba(43, 175, 199, 0.25) !important;
     transform: scale(1.1) !important;
 }
 
 .rdp-day_selected,
 .custom-calendar .react-datepicker__day--selected {
-    background-color: var(--skyblue, #2BAFC7) !important;
-    color: white !important;
+    background-color: var(--skyblue-color) !important;
+    color: var(--secondary-color) !important;
     border-radius: 50% !important;
     box-shadow: 0 2px 6px rgba(43, 175, 199, 0.4) !important;
     transform: scale(1.1) !important;
@@ -120,7 +120,7 @@
     font-size: 9px !important;
     font-weight: 600 !important;
     padding: 4px !important;
-    color: white !important;
+    color: var(--secondary-color) !important;
 }
 
 .react-datepicker__day-names {
@@ -128,24 +128,25 @@
     width: 10px !important;
     font-weight: 600 !important;
     padding: 4px !important;
-    color: #777 !important;
+    color: var(--gray-dark) !important;
 }
 
 /* ==== Current Month Label ==== */
 .custom-calendar .react-datepicker__current-month {
     font-size: 1rem !important;
-    margin-top: 10px;
+    margin-top: 4px;
+    margin-left: -2px;
     font-weight: 600 !important;
     color: var(--secondary-color) !important;
 }
 
 /* ==== Header ==== */
 .custom-calendar .react-datepicker__header {
-    background-color: var(--skyblue, #2BAFC7) !important;
+    background-color: var(--skyblue-color) !important;
     border-bottom: none !important;
     padding: 6px !important;
     border-radius: 6px 6px 0 0 !important;
-    color: white !important;
+    color: var(--secondary-color) !important;
 }
 
 /* ==== Popup table spacing ==== */
@@ -161,17 +162,17 @@
         overflow: hidden !important;
         background: none !important;
         width: 200px !important;
-        height: 200px !important;
+        height: 240px !important;
     }
 
     .react-datepicker__day-name,
     .react-datepicker__day,
     .react-datepicker__time-name {
-        color: #000;
+        color: var(--color-gray-medium);
         display: inline-block;
         width: 1.1rem;
         line-height: 1.4rem;
-        margin-top: 17px !important;
+        margin-top: 9px !important;
         text-align: center;
         margin: 0.166rem;
     }
@@ -181,12 +182,13 @@
         width: 19px !important;
         height: 19px !important;
         margin-top: 3px !important;
-        font-size: 10px !important;
+        font-size: 12px !important;
     }
 
     .rdp-caption_label,
     .custom-calendar .react-datepicker__current-month {
-        font-size: 9px !important;
+        font-size: 13px !important;
+        margin-left: -2px;
     }
 
     .rdp-nav_button {
@@ -196,6 +198,7 @@
 
     .rdp-head_cell,
     .custom-calendar .react-datepicker__day-name {
-        font-size: 8px !important;
+        font-size: 10px !important;
+        margin-top: -12px;
     }
 }

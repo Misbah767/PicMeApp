@@ -5,7 +5,7 @@ import {
   validatePassword,
   validateFullName1To3Words,
 } from "../utils/helper";
-import { setAccessToken, getAccessToken } from "../utils/localStorage"; // getAccessToken bhi import kiya
+import { setAccessToken, getAccessToken } from "../utils/localStorage"; 
 import { signUpUser } from "../api/auth";
 import { useNavigate, useSearchParams } from "react-router-dom";
 

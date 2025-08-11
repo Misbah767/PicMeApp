@@ -2,7 +2,8 @@ import React from "react";
 import InputField from "../../Components/InputFeild/InputField";
 import Button from "../../Components/Button/Button";
 import PasswordLock from "../../assets/icons/PasswordLock";
-
+import { Colors } from "../../constants/Colors";
+import "./CreatePassContent.css"
 export default function CreatePassContent({
   formData,
   handleChange,
@@ -14,7 +15,8 @@ export default function CreatePassContent({
   toggleConfirmPassword,
   loading,
 }) {
-  const getIconColor = (field) => (errors[field] ? "#FF5A5F" : "#807A7A");
+  const getIconColor = (field) =>
+    errors[field] ? Colors.red : Colors.grayDark;
 
   const getIconProps = (field) => ({
     width: "20",
@@ -23,13 +25,13 @@ export default function CreatePassContent({
   });
 
   return (
-    <div className="signin-content">
+    <div className="signin-content password-change-page">
       <h2 className="cp-heading">Create New Password</h2>
       <p className="subtext">
         Your new password must be different from previous used password.
       </p>
 
-      <form  onSubmit={handleSubmit} noValidate>
+      <form onSubmit={handleSubmit} noValidate>
         <div className="input-wrapper">
           <InputField
             type={showPassword ? "text" : "password"}
@@ -40,7 +42,11 @@ export default function CreatePassContent({
             leftIcon={<PasswordLock {...getIconProps("password")} />}
             rightIcon={
               <span className="toggle-password" onClick={togglePassword}>
-                <i className={`bi ${showPassword ? "bi-eye-slash" : "bi-eye"}`} />
+                <i
+                  className={`bi ${
+                    showPassword ? "bi-eye-slash" : "bi-eye"
+                  }`}
+                />
               </span>
             }
             error={errors.password}
@@ -57,22 +63,25 @@ export default function CreatePassContent({
             onChange={handleChange}
             leftIcon={<PasswordLock {...getIconProps("confirmPassword")} />}
             rightIcon={
-              <span className="toggle-password" onClick={toggleConfirmPassword}>
-                <i className={`bi ${showConfirmPassword ? "bi-eye-slash" : "bi-eye"}`} />
+              <span
+                className="toggle-password"
+                onClick={toggleConfirmPassword}
+              >
+                <i
+                  className={`bi ${
+                    showConfirmPassword ? "bi-eye-slash" : "bi-eye"
+                  }`}
+                />
               </span>
             }
             error={errors.confirmPassword}
             required
           />
         </div>
-<div className="cp-btn">
-        <Button
-          type="submit"
-          variant="filled"
-          disabled={loading}
-        >
-          {loading ? "Updating..." : "Update Password"}
-        </Button>
+        <div className="cp-btn">
+          <Button type="submit" variant="filled" disabled={loading}>
+            {loading ? "Updating..." : "Update Password"}
+          </Button>
         </div>
       </form>
     </div>

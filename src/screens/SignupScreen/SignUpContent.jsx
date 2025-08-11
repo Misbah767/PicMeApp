@@ -12,6 +12,7 @@ import ProfileIcon from "../../assets/icons/ProfileIcon";
 
 import "./SignUpContent.css";
 
+import { Colors } from "../../constants/Colors";
 export default function SignUpContent({
   showPassword,
   togglePassword,
@@ -25,7 +26,7 @@ export default function SignUpContent({
   handleClick,
   errors = {},
 }) {
-  const getIconColor = (field) => (errors[field] ? "#FF5A5F" : "#807A7A");
+  const getIconColor = (field) => (errors[field] ? Colors.red : Colors.grayDark);
 
   const getIconProps = (field) => ({
     width: "20",

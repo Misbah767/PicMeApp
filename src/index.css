@@ -8,12 +8,30 @@
 }
 
 :root {
-    --skyblue-color: #2BAFC7;
-    --secondary-color: #ffffff;
-    --gray-light: #E4DFDF;
-    --gray-medium: #747688;
-    --gray-dark: #807A7A;
-    --yellow: #FBBE47;
-    --red: #E53535;
-    --dark-red: #E53535;
+    --color-skyblue: #2BAFC7;
+    --color-skyblue-hover: #2fa2b7;
+
+    --color-white: #ffffff;
+
+    --color-gray-light: #E4DFDF;
+    --color-gray-medium: #747688;
+    --color-gray-dark: #807A7A;
+
+    --color-yellow: #FBBE47;
+
+    --color-red: #E53535;
+    --color-red-dark: #E53535;
+
+    --color-shadow-avatar: rgba(43, 175, 199, 0.25);
+    --lightskyblue-color: #F2FAFC;
+    /* changed from bg-light */
+    --color-bg-transparent: transparent;
+    --color-text-base: #000000;
+    --color-text-muted: #333333;
+    --color-shadow-light: rgba(0, 0, 0, 0.08);
+
+    /* Added for circle component */
+    --color-shadow-circle: rgba(0, 0, 0, 0.05);
+    --color-border-circle-light: #A19FC414;
+    --color-border-circle-outer: rgba(161, 159, 196, 0.08);
 }

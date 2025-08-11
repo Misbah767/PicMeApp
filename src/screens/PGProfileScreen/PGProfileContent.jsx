@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import "./PGProfileContent.css";
@@ -15,6 +14,8 @@ import PackageIcon from "../../assets/icons/PackageIcon";
 import WhitePackageIcon from "../../assets/icons/WhitePackageIcon";
 
 import PhotographerWorkContent from "../../Components/PhotographerWorkContent/PhotographerWorkContent";
+
+import { Colors } from "../../constants/Colors";
 
 export default function PGProfileContent() {
   const location = useLocation();
@@ -42,7 +43,11 @@ export default function PGProfileContent() {
               onClick={() => setActiveSection("portfolio")}
               leftIcon={
                 <PortfolioIcon
-                  color={activeSection === "portfolio" ? "#ffffff" : "#2BAFC7"}
+                  color={
+                    activeSection === "portfolio"
+                      ? Colors.secondaryColor
+                      : Colors.primaryColor
+                  }
                   width={20}
                   height={20}
                 />

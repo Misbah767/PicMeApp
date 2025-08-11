@@ -1,3 +1,7 @@
+/* ==============================
+ Booking Card Styles
+   ============================== */
+
 .booking-card {
     width: 460px;
     height: 500px;
@@ -10,23 +14,32 @@
     text-align: center;
     padding: 20px;
     box-sizing: border-box;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px var(--color-shadow-light);
 }
 
+/* Title */
 .booking-title {
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 20px;
-    color: #000;
+    color: var(--color-text-primary);
 }
 
+/* Booking Information */
 .booking-info h3 {
     font-size: 17px;
     font-weight: 500;
     margin: 6px 0;
-    color: #333;
+    color: var(--color-text-secondary);
 }
 
+/* User Name Styling */
+.user-name {
+    color: var(--skyblue-color);
+    font-weight: 600;
+}
+
+/* Buttons Container */
 .booking-buttons {
     display: flex;
     flex-direction: column;
@@ -35,11 +48,14 @@
     width: 78%;
 }
 
+/* Buttons Style */
 .booking-buttons button {
     width: 100%;
 }
 
-/* Tablet view */
+/* Responsive Styles */
+
+/* Tablet View */
 @media (max-width: 992px) {
     .booking-card {
         width: 80%;
@@ -47,26 +63,29 @@
     }
 
     .booking-title {
-        font-size: 22px;
+        font-size: 25px;
     }
 
     .booking-info h3 {
-        font-size: 16px;
+        font-size: 17px;
     }
 }
 
-/* Mobile view */
+/* Mobile View */
 @media (max-width: 576px) {
     .booking-card {
-        width: 95%;
-        padding: 20px 15px;
+        background-color: var(--color-bg-transparent);
+        width: 105%;
+        padding: 0;
+        box-shadow: none;
+        height: 380px;
     }
 
     .booking-title {
-        font-size: 20px;
+        font-size: 25px;
     }
 
     .booking-info h3 {
-        font-size: 15px;
+        font-size: 17px;
     }
 }

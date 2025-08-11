@@ -1,3 +1,4 @@
+/* user porifel card screen */
 .userprofile-card-page {
     background-color: var(--secondary-color);
     width: 93vw;
@@ -9,7 +10,7 @@
     padding: 2rem 0;
 }
 
-/* Heading same style as CircleCardDetail */
+/* Heading  */
 .userprofile-heading {
     font-size: 37px;
     text-align: center;
@@ -23,7 +24,6 @@
 .userprofile-card {
     display: flex;
     flex-direction: column;
-    /* Column instead of row */
     justify-content: center;
     align-items: center;
     width: 95vw;

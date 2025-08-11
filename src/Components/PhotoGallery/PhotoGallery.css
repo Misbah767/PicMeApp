@@ -3,7 +3,6 @@
 .photo-gallery-wrapper {
     width: 100%;
     max-width: 1125px;
-    /* Same as navbar */
     margin: 20px auto 0;
     box-sizing: border-box;
 }
@@ -11,7 +10,6 @@
 .photo-container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    /* Desktop */
     gap: 20px;
     padding: 0 10px 20px;
     justify-content: center;

@@ -3,8 +3,7 @@
     padding: 11px 20px;
     font-size: 14px;
     border-radius: 8px;
-    border: 2px solid #2BAFC7;
-    /* default border */
+    border: 2px solid var(--skyblue-color);
     cursor: pointer;
     transition: background-color 0.3s ease, opacity 0.3s ease;
     display: inline-flex;
@@ -14,27 +13,29 @@
     box-sizing: border-box;
 }
 
+/* Filled Button Variant */
 .filled {
-    background-color: #2BAFC7;
-    color: #ffffff;
+    background-color: var(--skyblue-color);
+    color: var(--secondary-color);
     border: 2px solid transparent;
-    /* << fix */
 }
 
 .filled:hover {
     background-color: #2fa2b7;
 }
 
+/* Outline Button Variant */
 .outline {
     background-color: transparent;
-    color: #2BAFC7;
-    border: 2px solid #2BAFC7;
+    color: var(--skyblue-color);
+    border: 2px solid var(--skyblue-color);
 }
 
 .outline:hover {
     opacity: 0.8;
 }
 
+/* Left Icon inside button */
 .leftIcon {
     display: inline-flex;
     align-items: center;

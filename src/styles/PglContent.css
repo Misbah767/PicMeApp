@@ -55,7 +55,7 @@
     width: 100%;
     line-height: 1.5;
     font-family: var(--font-family);
-    color: (var(--gray-medium)) !important;
+    color: var(--gray-medium) !important;
 }
 
 .avatar-list-container {
@@ -113,7 +113,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.3);
+    background: var(--gray-light);
     border-radius: 17px;
 }
 

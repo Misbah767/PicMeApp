@@ -8,6 +8,9 @@ import BackIcon from "../../assets/icons/BackIcon";
 import illustration from "../../assets/images/camera.png";
 import "./PasswordChanged.css";
 
+// Import Colors constants
+import { Colors } from "../../constants/Colors";
+
 export default function PasswordChanged() {
   const navigate = useNavigate();
 
@@ -32,13 +35,12 @@ export default function PasswordChanged() {
           </p>
 
           <Button
-  onClick={handleBackToLogin}
-  leftIcon={<BackIcon bgColor="white" iconColor="#2BAFC7" />}
-  className="back-btn"
->
-  BACK TO LOGIN
-</Button>
-
+            onClick={handleBackToLogin}
+            leftIcon={<BackIcon bgColor={Colors.secondaryColor} iconColor={Colors.primaryColor} />}
+            className="back-btn"
+          >
+            BACK TO LOGIN
+          </Button>
         </div>
       </div>
 

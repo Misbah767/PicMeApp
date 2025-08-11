@@ -1,12 +1,12 @@
 .profile-customize-card {
     width: 1126px;
     height: 397px;
-    background: #fff;
-    border: 1px solid #ddd;
+    background: var(--color-white);
+    border: 1px solid var(--color-gray-light);
     border-radius: 12px;
     padding: 30px;
     box-sizing: border-box;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px var(--color-shadow-light);
     margin: auto;
 }
 
@@ -14,6 +14,7 @@
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 25px;
+    color: var(--color-text-primary);
 }
 
 .profile-customize-form {
@@ -38,12 +39,27 @@
 }
 
 .profile-save-btn {
-    background: #4cafef;
+    background: var(--skyblue-color);
+    color: var(--secondary-color);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.profile-save-btn:hover {
+    background: var(--skyblue-hover);
 }
 
 .profile-cancel-btn {
-    border-color: #f44336;
-    color: #f44336;
+    border: 1.5px solid rgb(230, 84, 84);
+    color: red;
+    background: transparent;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.profile-cancel-btn:hover {
+    opacity: 0.8;
 }
 
 .icon-clickable {

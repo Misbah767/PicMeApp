@@ -6,7 +6,6 @@ const UserProfile = () => {
   const [user, setUser] = useState({ name: "", email: "", image: "" });
 
   useEffect(() => {
-    // LocalStorage se user data lena
     const storedUser = localStorage.getItem("user");
     if (storedUser) {
       setUser(JSON.parse(storedUser));

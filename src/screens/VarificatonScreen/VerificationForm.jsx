@@ -27,8 +27,7 @@ export default function VerificationForm() {
     const newCode = [...code];
     newCode[index] = value;
     setCode(newCode);
-
-    // Move to next input if not last and a value is entered
+   
     if (value && index < code.length - 1) {
       const nextInput = document.getElementById(`otp-${index + 1}`);
       nextInput?.focus();

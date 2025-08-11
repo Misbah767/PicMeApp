@@ -37,17 +37,12 @@
 .input {
     width: 100%;
     padding: 12px 40px;
-    /* same as .pg-review-card */
     border: 1.02px solid #E4DFDF;
     background-color: #ffffff;
     border-radius: 14px;
-    /* same radius as review card */
     height: auto;
-    /* remove fixed height */
     font-size: 13px;
-    /* same font-size as .pg-review-content */
     color: #747688;
-    /* same as review text */
     transition: box-shadow 0.3s ease;
     box-shadow: none;
     box-sizing: border-box;

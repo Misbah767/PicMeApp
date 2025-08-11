@@ -1,3 +1,4 @@
+/* =======================DetailPage styles================== */
 .P-Detail {
     display: flex;
     width: 98vw;
@@ -22,7 +23,7 @@
 }
 
 /* Tablet view */
-@media (max-width: 1024px) {
+@media (max-width: 784px) {
     .P-Detail {
         gap: 40px;
         padding: 15px;
@@ -30,6 +31,21 @@
 
     .paymentdetail-page {
         margin-top: 1rem !important;
+    }
+
+    .paymentdetail-page {
+        background-color: var(--secondary-color);
+        width: 95vw;
+        border-radius: 1.3rem;
+        margin-top: 3rem !important;
+        margin: auto;
+        box-shadow: none;
+    }
+
+    .payment-detail-title {
+        margin-top: 32px;
+        font-size: 29px;
+        margin-bottom: 0px;
     }
 }
 

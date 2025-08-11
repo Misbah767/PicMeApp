@@ -3,12 +3,18 @@
     align-items: center;
     background-color: var(--secondary-color);
     border: none;
-    border-radius: 8px;
-    padding: 12px 12px;
+    border-radius: 10px;
+    padding: 10px 12px;
     width: 100%;
     max-width: 400px;
     height: 50px;
+    position: relative;
     transition: border-color 0.3s ease;
+    box-shadow: none;
+}
+
+.search-input-wrapper.with-border {
+    border: 1px solid var(--gray-light);
     box-shadow: none;
 }
 
@@ -19,54 +25,10 @@
     color: #000;
 }
 
-.search-input-wrapper.with-border {
-    border: 1px solid var(--gray-light);
-    box-shadow: none;
-
-}
-
 .right-icon svg {
     margin-right: -45px;
     color: var(--gray-light);
-
 }
-
-.search-input-wrapper {
-    display: flex;
-    align-items: center;
-    background-color: var(--secondary-color);
-    padding: 10px 12px;
-    border-radius: 10px;
-    width: 100%;
-    position: relative;
-}
-
-.search-input-wrapper.with-border {
-    border: 1px solid var(--gray-light);
-
-}
-
-.search-input::placeholder {
-    color: grey !important;
-    opacity: 1;
-    /* for Firefox */
-}
-
-.search-input::-webkit-input-placeholder {
-    color: grey !important;
-    /* Chrome, Safari, Edge */
-}
-
-.search-input:-ms-input-placeholder {
-    color: grey !important;
-    /* Internet Explorer 10-11 */
-}
-
-.search-input::-ms-input-placeholder {
-    color: grey !important;
-    /* Microsoft Edge */
-}
-
 
 .search-input {
     border: none;
@@ -78,7 +40,24 @@
 }
 
 .search-input::placeholder {
-    color: grey !important;
+    color: var(--gray-light) !important;
+    opacity: 1;
+    /* for Firefox */
+}
+
+.search-input::-webkit-input-placeholder {
+    color: var(--gray-medium) !important;
+    /* Chrome, Safari, Edge */
+}
+
+.search-input:-ms-input-placeholder {
+    color: var(--gray-medium) !important;
+    /* Internet Explorer 10-11 */
+}
+
+.search-input::-ms-input-placeholder {
+    color: var(--gray-medium) !important;
+    /* Microsoft Edge */
 }
 
 @media (max-width: 480px) {
@@ -93,6 +72,7 @@
 
     .search-input {
         font-size: 14px;
+        width: 80% !important;
     }
 
     .search-input::placeholder {

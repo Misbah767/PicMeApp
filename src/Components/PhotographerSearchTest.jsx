@@ -1,4 +1,3 @@
-// src/components/PhotographerSearchTest.jsx
 import React from "react";
 import { searchAvailablePhotographers } from "../api/photographersAPi";
 

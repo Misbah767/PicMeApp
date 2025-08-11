@@ -1,4 +1,3 @@
-// src/components/Navbar/Navbar.jsx
 import React from "react";
 import { NavLink } from "react-router-dom";
 import WhiteLogo from "../WhiteLogo/WhiteLogo";
@@ -51,7 +50,7 @@ export default function Navbar() {
             <span className="navLinkText">Profile</span>
           </NavLink>
 
-          {/* 🔥 Logout Button */}
+          {/*  Logout Button */}
           <div
             className="nav-link"
             onClick={handleLogout}

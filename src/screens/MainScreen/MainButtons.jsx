@@ -7,7 +7,6 @@ export default function MainButtons() {
   const navigate = useNavigate();
 
   const handleNavigation = (type) => {
-    // Convert user-friendly string to numeric string type
     const typeValue = type === "customer" ? "0" : "1";
     console.log(`Navigating to SignIn as type=${typeValue}`);
     navigate(`/signin?type=${typeValue}`);

@@ -1,3 +1,4 @@
+/* imput options stylign  */
 .input-option-wrapper {
     width: 100%;
     width: 415px;
@@ -18,7 +19,7 @@
 .input-option-wrapper:hover {
     border-color: var(--skyblue-color);
     box-shadow: 0 0 6px rgba(43, 175, 199, 0.3);
-    background-color: #f9f9f9;
+    background-color: var(--secondary-color);
 }
 
 /* Active / selected state */
@@ -80,13 +81,27 @@
     }
 }
 
-/* Mobile adjustments */
-@media (max-width: 576px) {
+/* Mobile adjustments @media (max-width: 576px) {
     .input-option-wrapper {
         width: 300px;
         height: auto;
         padding: 12px;
         flex-direction: row;
+        gap: 8px;
+    }
+
+    .label-text {
+        margin-left: 13;
+    }
+} */
+
+@media (max-width: 466px) {
+    .input-option-wrapper {
+        width: 460px;
+        height: auto;
+        padding: 11px;
+        flex-direction: row;
+        border: 1px solid var(--gray-light);
         gap: 8px;
     }
 

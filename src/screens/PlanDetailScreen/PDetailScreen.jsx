@@ -6,6 +6,7 @@ import PaymentSelectedCard from "./PaymentSecletedCard";
 import ChooseDate from "../ScheduleScreen/ChooseDate"; 
 import Navbar from "../../Components/Navbar/Navbar";
 import "./PDetail.css";
+import BackButton from "../../Components/BackButton/BackButton";
 
 const PDetailScreen = () => {
   const { planId } = useParams();
@@ -25,15 +26,16 @@ const PDetailScreen = () => {
 
   const handleContinue = (paymentOption) => {
     setSelectedPayment(paymentOption);
-    setShowCalendar(true); // switch to calendar
+    setShowCalendar(true); 
   };
 
   return (
     <>
     <Navbar />
+    <BackButton />
     <div className="paymentdetail-page">
       
-
+   
       <h1 className="payment-detail-title">Payment Details</h1>
       <div>
         <div className="P-Detail">
@@ -51,7 +53,7 @@ const PDetailScreen = () => {
           ) : (
             <PaymentSelectedCard
               selectedPlan={selectedPlan}
-              onContinue={handleContinue} // pass this prop
+              onContinue={handleContinue} 
             />
           )}
         </div>

@@ -1,38 +1,19 @@
+/*========================= 
+CREATE NEW PASSWORD SSTLYES
+========================== */
 .create-password-page {
-    display: flex;
+    overflow: hidden;
     height: 100vh;
+
 }
 
-.password-content {
-    width: 360px;
-}
 
-.create-left,
-.create-right {
-    flex: 1;
-}
+.left-cpPage {
+    width: 100vw;
+    padding: 13px;
+    margin: 0px;
 
-.create-left {
-    background-color: var(--secondary-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
-
-.create-right {
-    background-color: var(--secondary-color);
-}
-
-.form-center {
-    max-width: 400px;
-    width: 100%;
-    padding: 60px 80px;
-}
-
-h2 .cp-heading {
-    font-size: 23px;
-}
-
 
 .subtext {
     color: var(--gray-medium);
@@ -40,16 +21,15 @@ h2 .cp-heading {
     margin-bottom: 24px;
 }
 
-
-
 .full-width {
     width: 100%;
     margin-top: 20px;
 }
 
-@media (max-width: 336px) {
+@media (max-width: 436px) {
     .left-cpPage {
         margin-top: 3rem;
+        width: 30vw;
     }
 }
 

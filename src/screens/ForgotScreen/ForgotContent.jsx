@@ -5,6 +5,7 @@ import MailIcon from "../../assets/icons/MailIcon";
 import BackIcon from "../../assets/icons/BackIcon";
 import useForgotLogic from "./useForgotLogic";
 import "./ForgotPassword.css";
+import { Colors } from "../../constants/Colors";
 
 export default function ForgotContent() {
   const {
@@ -19,9 +20,8 @@ export default function ForgotContent() {
 
   const email = formData.email;
   const error = errors.email;
-
-  // Icon color logic
-  const getIconColor = () => (error ? "#FF5A5F" : "#807A7A");
+  
+  const getIconColor = () => (error ? Colors.red : Colors.grayDark);
   const getIconProps = () => ({
     width: "18",
     height: "18",
@@ -37,14 +37,14 @@ export default function ForgotContent() {
         Please enter your email address to request a password reset
       </p>
       <InputField
-            type="email"
-            name="email"
-            placeholder="abc@email.com"
-            value={formData.email}
-            onChange={handleChange}
-            leftIcon={<MailIcon {...getIconProps("email")} />}
-            error={errors.email}
-          />
+        type="email"
+        name="email"
+        placeholder="abc@email.com"
+        value={formData.email}
+        onChange={handleChange}
+        leftIcon={<MailIcon {...getIconProps("email")} />}
+        error={errors.email}
+      />
 
       {/* Show API error */}
       {apiError && <p className="api-error">{apiError}</p>}
@@ -53,7 +53,7 @@ export default function ForgotContent() {
         <Button
           variant="filled"
           onClick={handleContinue}
-          
+          disabled={isButtonDisabled}
         >
           {loading ? "Loading..." : "Continue"}
         </Button>

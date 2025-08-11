@@ -1,3 +1,7 @@
+/* ==============================
+   Avatar Profile Card Styles
+   ============================== */
+
 .avatar-profile {
     width: 175px;
     height: 170px;
@@ -11,24 +15,25 @@
     cursor: pointer;
     text-align: center;
     transition: all 0.3s ease;
-    box-shadow: none;
+    /* box-shadow: none; */
     border: 1px solid var(--gray-light);
 }
 
 .avatar-profile:hover {
-
-    box-shadow: 0 3px 8px rgba(43, 175, 199, 0.25);
+    box-shadow: 0 3px 8px var(--avatar-shadow-color);
     border-color: var(--skyblue-color);
     transform: translateY(-0.2px);
+    transform: none;
 }
 
-
+/* Avatar Image */
 .avator-image {
     width: 58px;
     height: 62px;
     margin-bottom: 6px;
 }
 
+/* Name Styling */
 .avatar-name {
     font-size: 13.5px;
     font-weight: 600;
@@ -36,12 +41,14 @@
     margin: 3px 0 1px;
 }
 
+/* Subtitle Styling */
 .avatar-subtitle {
     font-size: 11.5px;
     color: var(--gray-medium);
     margin: 0 0 4px;
 }
 
+/* Review Section */
 .avatar-review {
     display: flex;
     align-items: center;
@@ -60,6 +67,11 @@
     color: var(--gray-dark);
 }
 
+/* ==============================
+     Responsive Styles
+     ============================== */
+
+/* Tablet and below (max-width: 768px) */
 @media screen and (max-width: 768px) {
     .avatar-profile {
         width: 130px;
@@ -84,6 +96,7 @@
     }
 }
 
+/* Mobile (max-width: 480px) */
 @media screen and (max-width: 480px) {
     .avatar-profile {
         width: 170px;

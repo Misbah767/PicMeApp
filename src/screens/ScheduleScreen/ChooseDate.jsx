@@ -42,7 +42,7 @@ export default function ChooseDate() {
           onChange={item => setRange([item.selection])}
           moveRangeOnFirstSelection={false}
           ranges={range}
-          rangeColors={['#2BAFC7']} // tumhare skyblue color ke liye
+          rangeColors={['#2BAFC7']} 
         />
       </div>
 

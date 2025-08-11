@@ -1,5 +1,6 @@
-/* src/pages/YourFolderName/CircleCardDetail.css */
-
+/* ==================================
+circle and paymetn card detilas Screen styles
+============================= */
 .circle-card-detail-page {
     background-color: var(--secondary-color);
     width: 93vw;
@@ -33,12 +34,12 @@
     margin: 0;
 }
 
-/*  Responsive layout for smaller screens */
+/*  Responsive layout  screens */
 @media (max-width: 992px) {
     .circle-card-detail {
         flex-direction: column;
         gap: 40px;
-        padding: 15px;
+        padding: 0px;
     }
 
     .payament-detail-heading {
@@ -54,5 +55,10 @@
 
     .payament-detail-heading {
         font-size: 24px;
+    }
+
+    .circle-card-detail-page {
+        box-shadow: none;
+        padding: 2rem 0;
     }
 }

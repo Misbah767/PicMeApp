@@ -1,5 +1,5 @@
 import React from "react";
-import { useCategories } from "../hooks/useCategories"; // ✅ MATCHES export
+import { useCategories } from "../hooks/useCategories"; //
 
 
 export default function CategoryTest() {
@@ -10,7 +10,7 @@ export default function CategoryTest() {
 
   return (
     <div style={{ marginBottom: "1rem" }}>
-      <h3>📋 Categories:</h3>
+      <h3> Categories:</h3>
       <ul>
       <ul>
   {(categories || []).map((cat) => (

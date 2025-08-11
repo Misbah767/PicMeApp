@@ -34,7 +34,7 @@
   flex-direction: column;
   gap: 1px;
   padding-top: 10px;
-  background-color: #fff;
+  background-color: var(--secondary-color);
   border-radius: 16px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   width: 100%;
@@ -96,7 +96,7 @@
   font-size: 13px;
   gap: 10px;
   margin: 13px 0;
-  color: #2393aa;
+  color: var(--skyblue-color);
 }
 
 .or-separator::before,
@@ -128,7 +128,7 @@
 }
 
 .signUp-link {
-  color: #2BAFC7;
+  color: var(--skyblue-color);
   text-decoration: none;
   font-weight: 600;
 }

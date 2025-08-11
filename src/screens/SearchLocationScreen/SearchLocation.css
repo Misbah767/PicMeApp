@@ -1,16 +1,15 @@
-/* src/screens/SearchLocation/SearchLocation.css */
-
+/*=============== search location screen====== ==============*/
 .search-location-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: var(--secondary);
+    background-color: var(--secondary-color);
     padding: 20px;
 }
 
 .search-location-box {
-    background-color: white;
+    background-color: var(--secondary-color);
     padding: 50px 30px;
     border-radius: 16px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
@@ -34,20 +33,20 @@
 .search-heading {
     font-size: 24px;
     margin-bottom: 12px;
-    color: #333;
+    color: var(--gray-medium);
     font-weight: 600;
 }
 
 .search-subtext {
     font-size: 16px;
-    color: #666;
+    color: var(--gray-medium);
     margin-bottom: 1px;
     line-height: 1.5;
 }
 
 .search-subtext-2 {
     font-size: 14px;
-    color: #666;
+    color: var(--gray-medium);
     margin-bottom: 24px;
     line-height: 1.5;
     margin-top: 0px;

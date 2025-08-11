@@ -7,9 +7,7 @@
     background-color: #ffffff;
 }
 
-/* ================================
-     Left Section (Form Area)
-  ================================ */
+
 .signup-left {
     flex: 1;
     display: flex;

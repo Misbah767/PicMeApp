@@ -50,7 +50,7 @@ const useForgotLogic = () => {
         setApiError(errorMsg);
       } else {
         console.log("Navigating to ForgotMessage...");
-        navigate("/ForgotMessage", { state: { email: formData.email.trim() } });
+        navigate("/", { state: { email: formData.email.trim() } });
       }
     } catch (err) {
       console.error("API error:", err);

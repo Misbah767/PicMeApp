@@ -1,6 +1,6 @@
 // src/pages/SignIn/SignInContent.js
 import { useEffect, useState } from "react";
-import { Link, useSearchParams } from "react-router-dom"; // ⬅ Added useSearchParams
+import { Link, useSearchParams } from "react-router-dom"; // 
 import { FiEye, FiEyeOff } from "react-icons/fi";
 
 import InputField from "../../Components/InputFeild/InputField";
@@ -22,7 +22,7 @@ export default function SignInContent({
   handleChange,
   formData,
   errors = {},
-  type: propType, // ⬅ renamed to avoid confusion
+  type: propType, // 
   apiError,
   successMessage,
 }) {
@@ -41,7 +41,7 @@ export default function SignInContent({
   });
 
   /* ===== Local State for Toast Messages ===== */
-  const [showSuccess, setShowSuccess] = useState(false);
+  // const [showSuccess, setShowSuccess] = useState(false);
   const [showError, setShowError] = useState(false);
 
   /* ===== Show success message for 10s ===== */

@@ -1,15 +1,19 @@
+/* ==============================
+   Avatar Card Styles
+   ============================== */
+
 .avator-card {
     width: 260px;
-    height: auto;
+    padding-top: 10px;
+    margin-top: -10px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 10px;
-    margin-top: -10px;
     box-sizing: border-box;
 }
 
+/* Avatar image styling */
 .avator-card-img img {
     width: 100px;
     height: 100px;
@@ -17,24 +21,28 @@
     object-fit: cover;
 }
 
+/* Card info container */
 .avator-card-info {
     text-align: center;
     margin-top: 10px;
 }
 
+/* Name styling */
 .avator-card-name {
     font-size: 22px;
     font-weight: 600;
-    color: black;
+    color: #000;
     margin: 0;
 }
 
+/* Subtitle styling */
 .avator-card-subtitle {
     font-size: 14px;
     color: var(--gray-medium);
     margin: 4px 0;
 }
 
+/* Review section */
 .avator-card-review {
     display: flex;
     align-items: center;
@@ -45,10 +53,9 @@
     margin-top: 5px;
 }
 
-/* Optional Small Variant */
+/* Smaller avatar card variant */
 .avator-card.large {
     width: 180px;
-    height: auto;
 }
 
 .avator-card.large .avator-card-img img {

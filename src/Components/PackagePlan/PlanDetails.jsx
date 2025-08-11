@@ -5,7 +5,7 @@ import PackagePlan from "./PackagePlan";
 
 const PlanDetail = () => {
   const { planId } = useParams();
-  const selectedPlan = packageData.find((p) => p.id === planId); // match by string id
+  const selectedPlan = packageData.find((p) => p.id === planId); 
 
   if (!selectedPlan) {
     return <h2>Plan not found</h2>;
@@ -14,8 +14,8 @@ const PlanDetail = () => {
   return (
     <div style={{ display: "flex", justifyContent: "center", padding: "40px" }}>
       <PackagePlan
-        {...selectedPlan}          // important: spread first
-        buttonText="Selected"      // then override
+        {...selectedPlan}         
+        buttonText="Selected"    
         isLarge={true}
       />
     </div>

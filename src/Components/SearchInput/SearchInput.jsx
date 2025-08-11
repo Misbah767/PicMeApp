@@ -37,13 +37,13 @@ const SearchInput = ({ onNameSearch, onCategorySelect }) => {
   const handleCategorySelect = (category) => {
     setSelectedCategory(category);
     onCategorySelect(category);
-    setShowDropdown(false); // select karte hi close
+    setShowDropdown(false); //
   };
 
   const handleClearCategory = () => {
     setSelectedCategory(null);
-    onCategorySelect(null); // clear category at parent
-    setShowDropdown(false); // clear karte hi close
+    onCategorySelect(null); // 
+    setShowDropdown(false); //
   };
 
   return (
