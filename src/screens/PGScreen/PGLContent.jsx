@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "./PglContent.css";
 import FindInput from "../../Components/FindInput/FindInput";
 import SearchInput from "../../Components/SearchInput/SearchInput";
 import LeftArrowIcon from "../../assets/icons/LeftArrowIcon";
@@ -7,7 +6,7 @@ import CrossIcon from "../../assets/icons/CrossIcon";
 import AvatarProfile from "../../Components/AvatorFile/AvatorProfile";
 import { searchAvailablePhotographers } from "../../api/photographersAPi";
 import { useCategories } from "../../hooks/useCategories";
-
+import "./PglContent.css"
 const PGLContent = ({ photographers = [], startDate, endDate, latitude, longitude }) => {
   const [allPhotographers, setAllPhotographers] = useState([]);
   const [filteredPhotographers, setFilteredPhotographers] = useState([]);
