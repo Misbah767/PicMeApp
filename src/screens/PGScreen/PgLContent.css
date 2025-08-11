@@ -112,6 +112,11 @@
     }
 }
 
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 17px;
+}
+
 @media screen and (max-width: 480px) {
     .pgl-wrapper {
         width: 100vw;
@@ -153,11 +158,4 @@
         row-gap: 16px;
         margin: 16px auto 0;
     }
-}
-
-
-
-::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 17px;
 }

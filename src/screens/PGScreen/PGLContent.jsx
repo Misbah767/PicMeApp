@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./PGLContent.css";
+import "./PglContent.css";
 import FindInput from "../../Components/FindInput/FindInput";
 import SearchInput from "../../Components/SearchInput/SearchInput";
 import LeftArrowIcon from "../../assets/icons/LeftArrowIcon";
